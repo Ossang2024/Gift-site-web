@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo/favicon (10).ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- code d'intégation et de redirection vers Emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("RCUysn0r0Rj7t62xn"); //clés publique
+        })();
+    </script>
+    <title>Gift Center</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header-top">
+            <div>
+                <p><i class="fas fa-map-marker-alt"></i> Ange Raphael, Douala Cameroum </p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="mailto:contact@mygiftcenter.com"><i class="fas fa-envelope" style="margin-right: 5px;"></i>giftcenter@.com</a></li>
+                    <li><a href="https://wa.me/237670123456" target="_blank"><i class="fa-solid fa-phone-flip"></i> +237 6 96 55 39 81</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/FB_IMG_1749970934301.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <ul class="nav">
+                    <li><a href="#" class="deco active">Acceuil</a></li>
+                    <li class="services">
+                        <a href="#">Nos services <i class="fas fa-chevron-down"></i> </a>
+                            <ul class="ul1">
+                                <li class="services1">
+                                    <a href="#">Formations</a>
+                                    <ul class="ul11">
+                                        <li><a href="#">Développement Web & mobil</a></li>
+                                        <li><a href="#">Infographie</a></li>
+                                        <li><a href="#">Bureautique</a></li>
+                                    </ul>
+                                </li>
+                                <li class="services2">
+                                    <a href="#">Création digitales </a>
+                                        <ul class="ul12">
+                                            <li><a href="#">Site web</a></li>
+                                            <li><a href="#">Application mobile</a></li>
+                                            <li><a href="#">Maintenance & Support</a></li>
+                                        </ul>
+                                </li>
+                                <li class="services3">
+                                    <a href="#">Langues & voyage </a>
+                                        <ul class="ul13">
+                                            <li><a href="views/allemand.html">Allemand</a></li>
+                                            <li><a href="views/italiens.html">Italiens</a></li>
+                                            <li><a href="views/Anglais">Anglais</a></li>
+                                        </ul>
+                                </li>
+                            </ul>
+                    </li>
+                    <li><a href="views/actualites.html" class="deco">À propos</a></li>                   
+                    <li><a href="views/contact.html" class="deco">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <nav id="mobile-menu">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="views/actualites.html">Actualités</a></li>  
+                    <li class="accordion-item">
+                        <div class="accordion-header">Tout savoir sur ATL <i class="fas fa-chevron-down"></i></div>
+                        <ul class="submenu">
+                            <li><a href="views/propos.html">À propos</a></li>
+                            <li><a href="views/besoins.html">Vos besoins</a></li>
+                            <li><a href="views/solutions.html">Nos solutions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="views/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="slider-container" id="slide">
+        <div class="slider-wrapper">
+            <div class="slider-item active">
+                <div class="flou">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Votre idée, notre code.</h2>
+                        <p class="slide-description">Nous bâtissons des expériences web puissantes et uniques.</p>
+                        <a href="#" class="slide-button">Nos formations </a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="flou">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Des formations adaptées à vos besoins</h2>
+                        <p class="slide-description">Découvrez nos modules professionnels </p>
+                        <a href="#" class="slide-button">Nos formations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="flou">
+                    <div class="slide-content">
+                        <h2 class="slide-title">L’Afrique connectée commence ici</h2>
+                        <p class="slide-description">Rejoignez notre réseau de leaders</p>
+                        <a href="#" class="slide-button">Nos formations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="flou">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Langues sans limites</h2>
+                        <p class="slide-description">Maîtrise les langues et découvre de nouveaux horizons. </p>
+                        <a href="#" class="slide-button">Nos formations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="flou">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Forme-toi autrement.</h2>
+                        <p class="slide-description">Renforcez les capacités de vos équipes dans le domaine des Télécomunications. </p>
+                        <a href="#" class="slide-button">Nos formations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <section class="section2">
+        <div class="first">
+            <div class="left">
+                <h1>Qui sommes-nous ?</h1>
+                <div></div>
+                <p>Gift Center est une entreprise basée à Douala, spécialisée dans la formation professionnelle, l’apprentissage des langues et le développement de solutions digitales innovantes. Nous accompagnons les jeunes et les entreprises vers la réussite grâce à nos services modernes et adaptés à leurs besoins. <br> <br><a href="views/propos.html" class="aa">En savoir plus <span>→</span></a></p>
+                
+            </div>
+            <div class="right">
+                <img src="assets/images/potentiel.jpg" alt="">
+            </div>
+        </div>
+        <div id="stats" class="stats-section">
+            <div class="stat">
+                <h2 class="count" data-target="200">0</h2>
+                <p>Étudiants formés</p>
+            </div>
+            <div class="stat">
+                <h2 class="count" data-target="10">0</h2>
+                <p>Langues enseignées</p>
+            </div>
+            <div class="stat">
+                <h2 class="count" data-target="15">0</h2>
+                <p>Projets développés</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="section3">
+        <h1>Nos domaines d'expertise</h1>
+        <div class="div"></div>
+        <div class="cards">
+            <div class="card">
+                <h2><i class="fas fa-graduation-cap"></i> <!-- Icône de graduation --></h2>
+                <h3>Formations Professionnelles</h3>
+                <p>Des formations en développement web, infographie, bureautique et plus encore.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-laptop-code"></i> <!-- Icône d'ordinateur avec code --></h2>
+                <h3>Création Digitale</h3>
+                <p>Développement de sites web, applications mobiles et maintenance.</p>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-language"></i> <!-- Icône de langues --></h2>
+                <h3>Langues & Voyage</h3>
+                <p>Apprentissage des langues étrangères et assistance pour les voyages.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="section4">
+        <div class="left">
+            <h1>À propos de nos Gift Center</h1>
+            <div class="div"></div>
+            <p>Centre de Formation Professionnelle depuis 2016, situé au quartier Ange Raphael, Douala, agréé et autorisé par arrêté ministériel N°000442/MINEFOP/SG/DFOP/SDG-SF/CSACD/CBAC du Ministère de l’Emploi et de la <span>Formation Professionnelle</span>, (MINEFOP).</p>
+            <p>Nos formations certifiantes (cours du soir disponible) sont accessibles aux titulaires du CEP/BEPC/PROBATOIRE/BAC et plus, dans les filières : informatique, industrie et gestion adminstrative. Les candidats obtiendront soit un <span>DQP</span>, ou un <span>CQP</span> et un <span>attestation</span>qui ouvrira les portes de l'emploi partout dans le monde.</p>
+            <p>Chez <span>Gift Center</span>, nous croyons que la maîtrise des langues est la clé pour ouvrir de nouvelles portes et découvrir de nouveaux horizons. Notre programme <span> "Langues & Voyage"</span> est conçu pour offrir une expérience d'apprentissage immersive et enrichissante, adaptée à tous les niveaux.</p>
+            <ul>
+                <li>Ce que nous offrons :</li>
+                <li> <strong>Cours de langues variés :</strong> Apprenez <a href="#">l'anglais</a>, <a href="#"> l'italien</a>, <a href="#">l'allemand</a> et d'autres langues avec des formateurs <span>expérimentés</span>.</li>
+                <li> <strong>Préparation aux voyages :</strong>Recevez des <span>conseils pratiques</span> sur la communication dans des contextes de <span> voyage</span>, y compris des phrases essentielles et des astuces culturelles.</li>
+                <li> <strong>Échanges linguistiques :</strong> Engagez-vous dans des échanges avec des locuteurs natifs pour améliorer votre fluidité et votre confiance.</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div>
+                <a href="#" class="aa">Inscrivez vous maintenant <span>→</span></a>
+            </div>
+            <img src="assets/images/FLYERS INFORMATIQUE E3_Plan de travail 1.jpg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="section5">
+        <div class="sous-section">
+            <div class="content">
+                <img src="images/chat.png" alt="">
+                <p class="first">Paroles d'apprenants</p>
+                <h1>Ce que disent nos apprenants</h1>
+                <p class="text"> Découvrez les expériences réelles de nos étudiants après leurs formations — témoignages authentiques sur les progrès et les voyages réalisés grâce à Gift Center.  </p>
+            </div>
+            <div class="testimony">
+                <div class="card">
+                    <img src="assets/images/quote.png" alt="" >
+                    <p class="testimony-text">"Grâce au programme 'Langues & Voyage' de Gift Center, j'ai gagné en confiance et en fluidité en anglais en seulement quelques mois."</p>
+                    <h3><span class="title_name">Sarah Lee</span> <em class="title_profession">Étudiante</em></h3>
+                    <img src="assets/images/testimonial-1.jpg" alt="" class="img">
+                </div>
+                <div class="points">
+                    <div onclick="changeOption(1)" class="point1 active-testimony"></div>
+                    <div onclick="changeOption(2)" class="point2"></div>
+                    <div onclick="changeOption(3)" class="point3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="section6">
+        <h1>Nos partenaires</h1>
+        <div class="div"></div>
+        <div class="logos">
+            <img src="assets/images/partner1.jpg" alt="">
+            <img src="assets/images/partner2.jpg" alt="">
+            <img src="assets/images/partner4.jpg" alt="">
+            <img src="assets/images/partner5.jpg" alt="">
+            <img src="assets/images/partner6.jpg" alt="">
+            <img src="assets/images/partner7.jpg" alt="">
+            <img src="assets/images/partner3.jpg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Chatbot flottant Gift Center -->
+    <button class="chat-float" id="chat-float" aria-label="Ouvrir le chat">
+    <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <aside class="chat-widget" id="chat-widget" aria-hidden="true" role="dialog" aria-label="Chat Gift Center">
+    <!-- <header class="chat-header">
+        <div class="brand">
+        <div>
+            <strong>Gift Center</strong>
+            <small>Support & infos</small>
+        </div>
+        </div>
+        <div class="chat-controls">
+        <button id="chat-minimize" title="Minimiser"><i class="fas fa-minus"></i></button>
+        <button id="chat-close" title="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+    </header> -->
+
+    <div class="chat-body" id="chat-body" tabindex="0" aria-live="polite">
+        <div class="bot-message">Bonjour 👋 Je suis l'assistant Gift Center. Comment puis‑je vous aider aujourd'hui ?</div>
+    </div>
+
+    <div class="chat-quick">
+        <button data-action="formations"><i class="fas fa-graduation-cap"></i> Formations</button>
+        <button data-action="creation"><i class="fas fa-laptop-code"></i> Création</button>
+        <button data-action="langues"><i class="fas fa-language"></i> Langues</button>
+    </div>
+
+    <form id="chat-form" class="chat-form" aria-label="Envoyer un message">
+        <input id="chat-input" type="text" placeholder="Écrire un message..." aria-label="Message">
+        <button type="submit" title="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+    </aside>
+
+
+
+
+    <a href="#slide" class="float-btn"><i class="fa-solid fa-chevron-up"></i></a>
+
+
+
+
+
+    <!-- footer -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Gift Center">
+                    <img src="assets/images/FB_IMG_1749970979564.jpg" alt="Gift Center logo" class="footer-logo">
+                </a>
+                <div class="brand-text">
+                    <h2>Gift Center</h2>
+                    <p>Formation professionnelle • Langues • Création digitale — Douala</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">Création digitale</a></li>
+                        <li><a href="#">Langues & Voyage</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>À propos</h3>
+                    <ul>
+                        <li><a href="views/propos.html">Qui sommes-nous ?</a></li>
+                        <li><a href="views/actualites.html">Actualités</a></li>
+                        <li><a href="views/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col contact-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ange Raphael, Douala, Cameroun</p>
+                    <p><i class="fas fa-phone"></i> <a href="https://wa.me/237670123456" target="_blank">+237 6 96 55 39 81</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@mygiftcenter.com">contact@mygiftcenter.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Inscrivez-vous à la newsletter</h3>
+                <p class="small">Recevez nos offres, dates de formation et événements.</p>
+                <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <div class="inputs">
+                        <input type="text" id="news-name" name="name" placeholder="Votre nom" aria-label="Votre nom">
+                        <input type="email" id="news-email" name="email" placeholder="Votre e-mail" aria-label="Votre e-mail" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe"><i class="fas fa-paper-plane"></i> S'inscrire</button>
+                </form>
+
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© <span id="year"></span> Gift Center. Tous droits réservés.</p>
+            <nav class="bottom-nav">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script/index.js"></script>
+</body>
