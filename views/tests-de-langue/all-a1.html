@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+  <title>Test niveau Allemand A1 — Gift Center</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#00bcd4;
+      --muted:#9aa6b2;
+      --white:#ffffff;
+      --success:#34d399;
+      --danger:#ff6b6b;
+      --glass: rgba(255,255,255,0.04);
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    /* html,body{height:100%;} */
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071026 0%, #0b1520 100%);
+      color:var(--white);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .wrapper{
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.7);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    header{
+      padding:24px;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    header h1{
+      font-size:20px;
+      margin:0;
+      letter-spacing:0.2px;
+    }
+    header p{margin:0;color:var(--muted);font-size:13px}
+
+    main{padding:28px;}
+    .info{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+    .info .badge{
+      background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      padding:10px 12px;
+      border-radius:10px;
+      font-size:14px;
+      color:var(--muted);
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .question{
+      background:var(--card);
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:14px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .question h3{margin:0 0 8px 0;font-size:16px}
+    .options{display:flex;flex-direction:column;gap:10px}
+    .option{
+      background:var(--glass);
+      padding:10px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      transition: transform .12s ease, background .12s ease;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .option:hover{transform:translateY(-3px)}
+    .option input{appearance:none}
+    .option .label{font-size:14px;color:var(--white)}
+    .option.selected{outline:2px solid rgba(0,188,212,0.18); background: rgba(0,188,212,0.03)}
+    .controls{
+      display:flex;
+      gap:10px;
+      margin-top:16px;
+      align-items:center;
+    }
+    button{
+      background:var(--accent);
+      color:var(--bg);
+      border:none;
+      padding:10px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    button.secondary{
+      background:transparent;
+      color:var(--white);
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .result{
+      margin-top:18px;
+      padding:16px;
+      border-radius:10px;
+      background: linear-gradient(90deg, rgba(52,211,153,0.06), rgba(255,255,255,0.02));
+      color:var(--white);
+      display:none;
+      border:1px solid rgba(52,211,153,0.08);
+    }
+    .result.fail{ background: linear-gradient(90deg, rgba(255,107,107,0.06), rgba(255,255,255,0.02)); border-color: rgba(255,107,107,0.08); }
+    .explanations{margin-top:12px; display:none; gap:10px; flex-direction:column}
+    .explain{background:rgba(255,255,255,0.02); padding:10px;border-radius:8px; font-size:14px;}
+
+    footer{
+      padding:16px 24px;
+      border-top:1px solid rgba(255,255,255,0.03);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      color:var(--muted);
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:720px){
+      .info{flex-direction:column;align-items:flex-start}
+      .question{padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" role="application" aria-labelledby="title">
+    <header>
+      <div>
+        <h1 id="title">Test de niveau — Allemand A1</h1>
+        <p>10 questions rapides • Durée approximative : 5 minutes</p>
+      </div>
+      <div>
+        <p style="text-align:right;color:var(--muted)">Gift Center • Gift Center Academy</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="info">
+        <div class="badge">Objectif : évaluer les acquis A1</div>
+        <div class="badge" id="last-score">Dernier score : —</div>
+        <div class="badge">Réponses affichées après soumission</div>
+      </div>
+
+      <form id="quiz-form" aria-describedby="instructions">
+        <div id="questions-container">
+          <!-- Les questions seront injectées par JS -->
+        </div>
+
+        <div class="controls">
+          <button type="button" id="submit-btn">Soumettre</button>
+          <button type="button" id="reset-btn" class="secondary">Réinitialiser</button>
+          <button type="button" id="show-answers" class="secondary">Afficher les réponses</button>
+        </div>
+
+        <div class="result" id="result-box" role="status" aria-live="polite">
+          <!-- Résultat affiché ici -->
+        </div>
+
+        <div class="explanations" id="explanations">
+          <!-- Explications par question -->
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div>Conseil : score ≥ 70% → correspond généralement au niveau A1.</div>
+      <div>Besoin d'un accompagnement ? <strong> <a href="../../index.html">Contactez Gift Center</a></strong></div>
+    </footer>
+  </div>
+
+  <script>
+    // QUESTIONS : 10 questions basiques niveau A1
+    const QUESTIONS = [
+      {
+        q: "Comment dit-on \"Bonjour\" (formel) en allemand ?",
+        options: ["Guten Morgen", "Guten Tag", "Hallo", "Tschüss"],
+        answer: 1,
+        explain: "« Guten Tag » est une salutation formelle (bonjour)."
+      },
+      {
+        q: "Quel article défini correspond au mot « Haus » (maison) ?",
+        options: ["der", "die", "das", "den"],
+        answer: 2,
+        explain: "« Haus » est neutre en allemand → « das Haus ». "
+      },
+      {
+        q: "Quel nombre correspond à « sieben » ?",
+        options: ["5", "6", "7", "8"],
+        answer: 2,
+        explain: "« sieben » = 7."
+      },
+      {
+        q: "Comment demandes-tu le nom de quelqu’un ?",
+        options: ["Wie heißt du?", "Wo wohnst du?", "Was machst du?", "Wie alt bist du?"],
+        answer: 0,
+        explain: "« Wie heißt du? » = Comment tu t'appelles ?"
+      },
+      {
+        q: "Quelle forme est correcte pour « Je suis étudiant » ?",
+        options: ["Ich habe Student.", "Ich bin Student.", "Ich sein Student.", "Ich Student bin."],
+        answer: 1,
+        explain: "On utilise « sein » → « Ich bin Student. »"
+      },
+      {
+        q: "Quel mot signifie 'non' en allemand ?",
+        options: ["aber", "nein", "nicht", "doch"],
+        answer: 1,
+        explain: "« Nein » signifie 'non'. « Nicht » sert pour la négation d'un verbe/complément."
+      },
+      {
+        q: "Quel jour est 'Dienstag' ?",
+        options: ["Lundi", "Mardi", "Mercredi", "Jeudi"],
+        answer: 1,
+        explain: "Dienstag = Mardi."
+      },
+      {
+        q: "Choisis la phrase correcte : 'J'aime le café.'",
+        options: ["Ich mag Kaffee.", "Ich mag den Kaffee.", "Ich habe Kaffee.", "Ich bin Kaffee."],
+        answer: 0,
+        explain: "Formulation simple : « Ich mag Kaffee. »"
+      },
+      {
+        q: "Comment dire 'au revoir' de façon informelle ?",
+        options: ["Auf Wiedersehen", "Guten Abend", "Tschüss", "Guten Morgen"],
+        answer: 2,
+        explain: "« Tschüss » = Au revoir (informel)."
+      },
+      {
+        q: "Quelle couleur est 'grün' ?",
+        options: ["Bleu", "Vert", "Rouge", "Noir"],
+        answer: 1,
+        explain: "« grün » = vert."
+      }
+    ];
+
+    // Générer l'UI
+    const container = document.getElementById('questions-container');
+    const form = document.getElementById('quiz-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const showAnswersBtn = document.getElementById('show-answers');
+    const resultBox = document.getElementById('result-box');
+    const explanationsBox = document.getElementById('explanations');
+    const lastScoreEl = document.getElementById('last-score');
+
+    function createQuestionElement(item, index){
+      const qWrap = document.createElement('div');
+      qWrap.className = 'question';
+      qWrap.setAttribute('data-index', index);
+
+      const h3 = document.createElement('h3');
+      h3.textContent = `${index+1}. ${item.q}`;
+      qWrap.appendChild(h3);
+
+      const optionsWrap = document.createElement('div');
+      optionsWrap.className = 'options';
+
+      item.options.forEach((opt, i) => {
+        const optDiv = document.createElement('label');
+        optDiv.className = 'option';
+        optDiv.setAttribute('tabindex', 0);
+
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = 'q' + index;
+        input.value = i;
+        input.style.display = 'none';
+
+        const span = document.createElement('span');
+        span.className = 'label';
+        span.textContent = opt;
+
+        optDiv.appendChild(input);
+        optDiv.appendChild(span);
+
+        // click / keyboard selection
+        optDiv.addEventListener('click', () => {
+          selectOption(index, i);
+        });
+        optDiv.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            selectOption(index, i);
+          }
+        });
+
+        optionsWrap.appendChild(optDiv);
+      });
+
+      qWrap.appendChild(optionsWrap);
+      return qWrap;
+    }
+
+    QUESTIONS.forEach((q, idx) => {
+      container.appendChild(createQuestionElement(q, idx));
+    });
+
+    function selectOption(qIndex, optIndex){
+      const qElem = container.querySelector(`.question[data-index="${qIndex}"]`);
+      const options = qElem.querySelectorAll('.option');
+      options.forEach((el, i) => {
+        el.classList.toggle('selected', i === optIndex);
+        const input = el.querySelector('input');
+        input.checked = (i === optIndex);
+      });
+    }
+
+    // Soumettre le test
+    function gradeQuiz(){
+      const total = QUESTIONS.length;
+      let correct = 0;
+      let details = [];
+
+      QUESTIONS.forEach((q, i) => {
+        const qElem = container.querySelector(`.question[data-index="${i}"]`);
+        const selected = qElem.querySelector('input:checked');
+        const selIndex = selected ? parseInt(selected.value, 10) : null;
+        const isCorrect = (selIndex === q.answer);
+        if(isCorrect) correct++;
+        details.push({index: i, selected: selIndex, correct: q.answer, explain: q.explain});
+      });
+
+      const scorePercent = Math.round((correct / total) * 100);
+
+      // Afficher résultat
+      resultBox.style.display = 'block';
+      explanationsBox.style.display = 'flex';
+      explanationsBox.innerHTML = '';
+
+      let statusText = '';
+      if(scorePercent >= 70){
+        statusText = `Bravo ! Vous obtenez ${scorePercent}% — Niveau A1 probable. (${correct}/${total} bonnes réponses)`;
+        resultBox.classList.remove('fail');
+      } else {
+        statusText = `Résultat : ${scorePercent}% — Besoin de renforcement. (${correct}/${total} bonnes réponses)`;
+        resultBox.classList.add('fail');
+      }
+      resultBox.innerHTML = `<strong>${statusText}</strong><div style="margin-top:6px;color:var(--muted);font-size:13px">Conseil : revoyez les points indiqués ci-dessous et retentez le test.</div>`;
+
+      // Explications
+      details.forEach(d => {
+        const el = document.createElement('div');
+        el.className = 'explain';
+        const qText = document.createElement('div');
+        qText.style.fontWeight = '600';
+        qText.style.marginBottom = '6px';
+        qText.textContent = `${d.index+1}. ${QUESTIONS[d.index].q}`;
+        const ansText = document.createElement('div');
+        const correctLabel = QUESTIONS[d.index].options[d.correct];
+        const chosenLabel = d.selected !== null ? QUESTIONS[d.index].options[d.selected] : '(aucune réponse)';
+        ansText.innerHTML = `Votre réponse : <strong>${chosenLabel}</strong> — Réponse correcte : <strong>${correctLabel}</strong>`;
+        const expl = document.createElement('div');
+        expl.style.marginTop = '6px';
+        expl.style.color = 'var(--muted)';
+        expl.textContent = QUESTIONS[d.index].explain;
+        el.appendChild(qText);
+        el.appendChild(ansText);
+        el.appendChild(expl);
+        explanationsBox.appendChild(el);
+
+        // coloration visuelle des options
+        const qElem = container.querySelector(`.question[data-index="${d.index}"]`);
+        qElem.querySelectorAll('.option').forEach((optEl, i) => {
+          optEl.style.opacity = '0.9';
+          optEl.style.transition = 'all .15s ease';
+          optEl.style.border = '1px solid rgba(255,255,255,0.02)';
+          if(i === d.correct){
+            optEl.style.outline = '2px solid rgba(52,211,153,0.12)';
+            optEl.style.background = 'rgba(52,211,153,0.03)';
+          }
+          if(d.selected !== null && i === d.selected && d.selected !== d.correct){
+            optEl.style.outline = '2px solid rgba(255,107,107,0.12)';
+            optEl.style.background = 'rgba(255,107,107,0.03)';
+          }
+        });
+      });
+
+      // Sauvegarder le score localement
+      try{
+        localStorage.setItem('giftcenter_a1_score', JSON.stringify({score: scorePercent, date: new Date().toISOString()}));
+      }catch(e){}
+      updateLastScore();
+      // Scroll vers résultat
+      resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    function updateLastScore(){
+      try{
+        const raw = localStorage.getItem('giftcenter_a1_score');
+        if(raw){
+          const o = JSON.parse(raw);
+          const d = new Date(o.date);
+          lastScoreEl.textContent = `Dernier score : ${o.score}% (${d.toLocaleDateString()})`;
+        } else {
+          lastScoreEl.textContent = 'Dernier score : —';
+        }
+      }catch(e){
+        lastScoreEl.textContent = 'Dernier score : —';
+      }
+    }
+
+    submitBtn.addEventListener('click', (e) => {
+      gradeQuiz();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      // clear selections
+      container.querySelectorAll('.option').forEach(opt => {
+        opt.classList.remove('selected');
+        const input = opt.querySelector('input');
+        if(input) input.checked = false;
+        // reset styles
+        opt.style.outline = '';
+        opt.style.background = '';
+      });
+      resultBox.style.display = 'none';
+      explanationsBox.style.display = 'none';
+      explanationsBox.innerHTML = '';
+      resultBox.classList.remove('fail');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    showAnswersBtn.addEventListener('click', () => {
+      // show correct answers without grading user's answers
+      explanationsBox.style.display = 'flex';
+      explanationsBox.innerHTML = '';
+      QUESTIONS.forEach((q, i) => {
+        const el = document.createElement('div');
+        el.className = 'explain';
+        const qText = document.createElement('div');
+        qText.style.fontWeight = '600';
+        qText.textContent = `${i+1}. ${q.q}`;
+        const ansText = document.createElement('div');
+        ansText.innerHTML = `Réponse correcte : <strong>${q.options[q.answer]}</strong>`;
+        const expl = document.createElement('div');
+        expl.style.marginTop = '6px';
+        expl.style.color = 'var(--muted)';
+        expl.textContent = q.explain;
+        el.appendChild(qText);
+        el.appendChild(ansText);
+        el.appendChild(expl);
+        explanationsBox.appendChild(el);
+
+        // highlight in UI
+        const qElem = container.querySelector(`.question[data-index="${i}"]`);
+        qElem.querySelectorAll('.option').forEach((optEl, idx) => {
+          optEl.style.outline = '';
+          optEl.style.background = '';
+          if(idx === q.answer){
+            optEl.style.outline = '2px solid rgba(0,188,212,0.12)';
+            optEl.style.background = 'rgba(0,188,212,0.03)';
+          }
+        });
+      });
+      explanationsBox.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    // Initial update
+    updateLastScore();
+
+  </script>
+</body>
+</html>
