@@ -1,207 +1,227 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
-  <title>Test d’allemand – Niveau A2</title>
-  <style>
+<meta charset="UTF-8">
+<title>Test Deutsch A2 – Goethe Niveau</title>
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
     body {
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(180deg,#071026 0%, #0b1520 100%);
+        font-family: "poppins", sans-serif;
+        background: linear-gradient(to bottom, black, red, yellow);
+        color: #fff;
+        padding: 20px;
     }
 
     .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        max-width: 900px;
+        margin: auto;
+        background: rgba(0,0,0,0.7);
+        padding: 20px;
+        border-radius: 10px;
     }
 
     h1 {
-      text-align: center;
-      color: #dfe8ff;
+        text-align: center;
+        color: yellow;
     }
 
     .question {
-      margin-bottom: 25px;
-    }
-
-    .question h3 {
-      margin-bottom: 10px;
-    }
-
-    label {
-      display: block;
-      background: #0b1520;
-      padding: 10px;
-      border-radius: 8px;
-      margin: 6px 0;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    label:hover {
-      background: rgba(0,188,212,0.03);
+        background: rgba(255,255,255,0.12);
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
     }
 
     button {
-      background: #071026;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      display: block;
-      margin: 20px auto;
-      transition: 0.3s;
+        background: red;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
     }
 
     button:hover {
-      background: rgba(255,255,255,0.02);
+        background: yellow;
+        color: black;
     }
 
-    .result {
-      display: none;
-      text-align: center;
-      font-size: 20px;
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.02);
+    #resultat {
+        background: rgba(255,255,255,0.2);
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        display: none;
     }
-  </style>
+
+    .correct { color: #90ee90; }
+    .wrong { color: #ff8080; }
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Test d’allemand – Niveau A2</h1>
-    <form id="quizForm">
 
-      <div class="question">
-        <h3>1. Wie spät ist es?</h3>
-        <label><input type="radio" name="q1" value="a"> Sie ist groß.</label>
-        <label><input type="radio" name="q1" value="b"> Es ist acht Uhr.</label>
-        <label><input type="radio" name="q1" value="c"> Ich bin müde.</label>
-      </div>
+<div class="container">
+<h1>Test de Niveau Allemand A2 – Goethe</h1>
+<p>Répondez aux 20 questions suivantes pour évaluer votre niveau A2.</p>
 
-      <div class="question">
-        <h3>2. Was machst du am Wochenende?</h3>
-        <label><input type="radio" name="q2" value="a"> Ich gehe ins Kino.</label>
-        <label><input type="radio" name="q2" value="b"> Ich esse Montag.</label>
-        <label><input type="radio" name="q2" value="c"> Ich bin ein Tisch.</label>
-      </div>
+<form id="quiz">
 
-      <div class="question">
-        <h3>3. Wähle die richtige Präposition: Ich warte ___ den Bus.</h3>
-        <label><input type="radio" name="q3" value="a"> in</label>
-        <label><input type="radio" name="q3" value="b"> für</label>
-        <label><input type="radio" name="q3" value="c"> auf</label>
-      </div>
-
-      <div class="question">
-        <h3>4. Ergänze: Ich habe gestern viel ___.</h3>
-        <label><input type="radio" name="q4" value="a"> schlafen</label>
-        <label><input type="radio" name="q4" value="b"> geschlafen</label>
-        <label><input type="radio" name="q4" value="c"> schlafe</label>
-      </div>
-
-      <div class="question">
-        <h3>5. Wähle den richtigen Satz:</h3>
-        <label><input type="radio" name="q5" value="a"> Er kann gut schwimmen.</label>
-        <label><input type="radio" name="q5" value="b"> Er schwimmt kann gut.</label>
-        <label><input type="radio" name="q5" value="c"> Schwimmen kann er gut ist.</label>
-      </div>
-
-      <div class="question">
-        <h3>6. Übersetze : „Ich suche meine Tasche.“</h3>
-        <label><input type="radio" name="q6" value="a"> Je vends mon sac.</label>
-        <label><input type="radio" name="q6" value="b"> Je cherche mon sac.</label>
-        <label><input type="radio" name="q6" value="c"> J’aime mon sac.</label>
-      </div>
-
-      <div class="question">
-        <h3>7. Was passt? – Ich trinke morgens gern ___.</h3>
-        <label><input type="radio" name="q7" value="a"> Wasser</label>
-        <label><input type="radio" name="q7" value="b"> Brot</label>
-        <label><input type="radio" name="q7" value="c"> Suppe</label>
-      </div>
-
-      <div class="question">
-        <h3>8. Ergänze: Ich wohne ___ Berlin.</h3>
-        <label><input type="radio" name="q8" value="a"> an</label>
-        <label><input type="radio" name="q8" value="b"> in</label>
-        <label><input type="radio" name="q8" value="c"> nach</label>
-      </div>
-
-      <div class="question">
-        <h3>9. Wähle die richtige Antwort: Wie lange lernst du schon Deutsch?</h3>
-        <label><input type="radio" name="q9" value="a"> Seit zwei Jahren.</label>
-        <label><input type="radio" name="q9" value="b"> Für zwei Jahre.</label>
-        <label><input type="radio" name="q9" value="c"> Ich lerne morgen.</label>
-      </div>
-
-      <div class="question">
-        <h3>10. Ergänze: Ich habe keine Zeit, ___ ich muss arbeiten.</h3>
-        <label><input type="radio" name="q10" value="a"> und</label>
-        <label><input type="radio" name="q10" value="b"> weil</label>
-        <label><input type="radio" name="q10" value="c"> aber</label>
-      </div>
-
-      <button type="button" onclick="submitQuiz()">Voir mon résultat</button>
-    </form>
-
-    <div id="result" class="result"></div>
-  </div>
-
-  <script>
-    function submitQuiz() {
-      const correctAnswers = {
-        q1: "b",
-        q2: "a",
-        q3: "c",
-        q4: "b",
-        q5: "a",
-        q6: "b",
-        q7: "a",
-        q8: "b",
-        q9: "a",
-        q10: "b"
-      };
-
-      let score = 0;
-      let total = Object.keys(correctAnswers).length;
-
-      for (let q in correctAnswers) {
-        const selected = document.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === correctAnswers[q]) {
-          score++;
-        }
-      }
-
-      const resultDiv = document.getElementById('result');
-      resultDiv.style.display = "block";
-
-      let message = "";
-      if (score <= 4) {
-        message = "Niveau encore faible 😅 – Continuez à pratiquer.";
-      } else if (score <= 7) {
-        message = "Bon niveau A2 👍 – Vous comprenez déjà les bases du quotidien.";
-      } else {
-        message = "Excellent 🎯 – Vous êtes prêt pour le niveau B1 !";
-      }
-
-      resultDiv.innerHTML = `
-        <h2>Résultat : ${score}/${total}</h2>
-        <p>${message}</p>
-      `;
+<script>
+const questions = [
+    {
+        q: "1. Ergänze: Ich habe keine Zeit, ______ ich muss arbeiten.",
+        a: ["denn", "aber", "oder"],
+        correct: 0
+    },
+    {
+        q: "2. Welche Antwort passt? – 'Wie lange lernst du schon Deutsch?'",
+        a: ["Seit zwei Jahren.", "Ich bin müde.", "In der Schule."],
+        correct: 0
+    },
+    {
+        q: "3. Modalverb: Ich ______ morgen früh aufstehen.",
+        a: ["kann", "muss", "dürft"],
+        correct: 1
+    },
+    {
+        q: "4. Was passt? Ich gehe ______ Supermarkt.",
+        a: ["zum", "im", "bei"],
+        correct: 0
+    },
+    {
+        q: "5. Plural: der Schuh",
+        a: ["die Schuhs", "die Schuhe", "die Schuhen"],
+        correct: 1
+    },
+    {
+        q: "6. Welche Aussage ist höflich?",
+        a: ["Gib mir Wasser!", "Wasser, bitte.", "Ich will Wasser!"],
+        correct: 1
+    },
+    {
+        q: "7. Ergänze: Ich interessiere mich ______ Musik.",
+        a: ["für", "an", "mit"],
+        correct: 0
+    },
+    {
+        q: "8. Welche Antwort ist richtig? – 'Was machst du am Wochenende?'",
+        a: ["Ich gehe wandern.", "Ich habe braun.", "Ich bin kalt."],
+        correct: 0
+    },
+    {
+        q: "9. Perfekt: Ich ______ gestern einen Film gesehen.",
+        a: ["habe", "bin", "werde"],
+        correct: 0
+    },
+    {
+        q: "10. Welche Präposition passt? – 'Ich warte ______ den Bus.'",
+        a: ["auf", "an", "bei"],
+        correct: 0
+    },
+    {
+        q: "11. Was bedeutet: 'Termin vereinbaren'?",
+        a: ["Fixer un rendez-vous", "Changer d’adresse", "Chercher un travail"],
+        correct: 0
+    },
+    {
+        q: "12. Ergänze: Kannst du mir bitte ______?",
+        a: ["helfen", "hilfst", "geholfen"],
+        correct: 0
+    },
+    {
+        q: "13. Welche Antwort passt? – 'Wie findest du den Film?'",
+        a: ["Er ist spannend.", "Ich bin Film.", "Ich gehe spannend."],
+        correct: 0
+    },
+    {
+        q: "14. Konjugation: Er ______ jeden Tag Sport.",
+        a: ["machen", "macht", "machst"],
+        correct: 1
+    },
+    {
+        q: "15. Was passt? Ich wohne seit 2020 in Berlin. Das bedeutet:",
+        a: ["Ich wohne immer noch dort.", "Ich wohne nicht mehr dort.", "Ich werde dort wohnen."],
+        correct: 0
+    },
+    {
+        q: "16. Gegenteil von 'teuer'",
+        a: ["billig", "langsam", "voll"],
+        correct: 0
+    },
+    {
+        q: "17. Ergänze: Wir freuen uns ______ deinen Besuch.",
+        a: ["auf", "mit", "zu"],
+        correct: 0
+    },
+    {
+        q: "18. Welche Form ist richtig? – 'Maria hat ______' (Beispiel: ein Auto)",
+        a: ["es gekauft", "kauft es", "es kaufen"],
+        correct: 0
+    },
+    {
+        q: "19. Was bedeutet: 'Entschuldigung, ich habe mich verspätet'?",
+        a: ["Sorry, je suis en retard", "Je ne sais pas", "J’ai oublié quelque chose"],
+        correct: 0
+    },
+    {
+        q: "20. Ergänze: Wenn es regnet, ______ wir zu Hause.",
+        a: ["bleiben", "bleibt", "bleibst"],
+        correct: 0
     }
-  </script>
+];
+
+// Génération dynamique HTML
+document.write(
+    questions.map((q,i)=>`
+    <div class="question">
+        <p><strong>${q.q}</strong></p>
+        ${q.a.map((opt,j)=>`
+            <label><input type="radio" name="q${i}" value="${j}"> ${opt}</label><br>
+        `).join("")}
+    </div>
+    `).join("")
+);
+</script>
+
+<button type="button" onclick="corriger()">Voir les résultats</button>
+
+</form>
+
+<div id="resultat"></div>
+</div>
+
+<script>
+function corriger() {
+    let score = 0;
+    let output = "<h2>Résultats :</h2>";
+
+    questions.forEach((q,i)=>{
+        const user = document.querySelector(`input[name='q${i}']:checked`);
+        if (!user) {
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='wrong'>❌ Pas de réponse</span><br>
+            Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;
+        } 
+        else if (parseInt(user.value) === q.correct) {
+            score++;
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='correct'>✔ Bonne réponse</span></p>`;
+        } 
+        else {
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='wrong'>❌ Mauvaise réponse</span><br>
+            Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;
+        }
+    });
+
+    output += `<h3>Score final : ${score} / ${questions.length}</h3>`;
+    document.getElementById("resultat").innerHTML = output;
+    document.getElementById("resultat").style.display = "block";
+}
+</script>
+
 </body>
 </html>

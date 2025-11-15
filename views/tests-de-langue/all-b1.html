@@ -1,236 +1,147 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
-  <title>Test d’allemand – Niveau B1</title>
-  <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<title>Test Deutsch B1 – Goethe Niveau</title>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
     body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      padding: 40px 10%;
-      background: linear-gradient(180deg,#071026 0%, #0b1520 100%);
+        font-family: "poppins", sans-serif;
+        background: linear-gradient(to bottom, black, red, yellow);
+        color: #fff;
+        padding: 20px;
     }
 
-    .quiz-container {
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      padding: 40px;
-      max-width: 900px;
-      margin: 0 auto;
+    .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(0,0,0,0.75);
+        padding: 20px;
+        border-radius: 10px;
     }
 
     h1 {
-      text-align: center;
-      color: #dfe8ff;
-      margin-bottom: 20px;
-    }
-
-    p.intro {
-      text-align: center;
-      font-size: 1.1em;
-      color: #dbe6ff;
-      margin-bottom: 30px;
+        text-align: center;
+        color: yellow;
     }
 
     .question {
-      border: 1px solid #dce7ff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      transition: transform 0.3s;
-      background: #1c2631;
-    }
-
-    .question:hover {
-      transform: scale(1.02);
-    }
-
-    .question h3 {
-      margin-bottom: 10px;
-      color: #dce7ff;
-    }
-
-    label {
-      display: block;
-        background: #071026;
-      border-radius: 8px;
-      padding: 10px;
-      margin: 6px 0;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    label:hover {
-        background: #1c2631;
-    }
-
-    input[type="radio"] {
-      margin-right: 10px;
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
     }
 
     button {
-      background: #071026;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      display: block;
-      margin: 30px auto 0;
-      transition: background 0.3s;
+        background: red;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
     }
 
     button:hover {
-      background: #081828;
+        background: yellow;
+        color: black;
     }
 
-    .result {
-      text-align: center;
-      display: none;
-      margin-top: 30px;
-      padding: 25px;
-      background: #071026;
-      border-radius: 10px;
-      font-size: 18px;
-      animation: fadeIn 0.5s ease;
+    #resultat {
+        background: rgba(255,255,255,0.2);
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        display: none;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    .correct { color: #90ee90; font-weight: bold; }
+    .wrong { color: #ff8080; font-weight: bold; }
+</style>
 </head>
+
 <body>
 
-  <div class="quiz-container">
-    <h1>Test d’allemand – Niveau B1</h1>
-    <p class="intro">Évaluez votre compréhension, votre vocabulaire et votre grammaire en allemand niveau intermédiaire.</p>
+<div class="container">
+<h1>Test de Niveau Allemand B1 – Goethe</h1>
+<p>Répondez aux 20 questions pour évaluer votre niveau B1.</p>
 
-    <form id="quizForm">
+<form id="quiz">
 
-      <div class="question">
-        <h3>1. Welcher Satz ist richtig?</h3>
-        <label><input type="radio" name="q1" value="a"> Ich freue mich auf der Urlaub.</label>
-        <label><input type="radio" name="q1" value="b"> Ich freue mich auf den Urlaub.</label>
-        <label><input type="radio" name="q1" value="c"> Ich freue mich an den Urlaub.</label>
-      </div>
+<script>
+const questions = [
+    { q: "1. Ergänze: Ich würde ins Kino gehen, ______ ich Zeit hätte.", a:["wenn","weil","ob"], correct:0 },
+    { q: "2. Was bedeutet 'sich freuen auf'?", a:["to look forward to","to be angry","to sleep"], correct:0 },
+    { q: "3. Welches Wort passt? Ich interessiere mich ______ Politik.", a:["für","an","mit"], correct:0 },
+    { q: "4. Ergänze: Er fragt, ob du ______ ihm helfen kannst.", a:["kannst","könntest","musst"], correct:1 },
+    { q: "5. Passende Antwort: 'Haben Sie morgen Zeit?' – ", a:["Ja, ich habe Zeit.","Nein, ich bin alt.","Ich bin müde."], correct:0 },
+    { q: "6. Perfekt: Wir ______ das Buch gestern gelesen.", a:["haben","sind","werden"], correct:0 },
+    { q: "7. Welche Präposition passt? Ich warte ______ den Bus.", a:["auf","an","bei"], correct:0 },
+    { q: "8. Gegenteil von 'schwer'", a:["leicht","dunkel","lang"], correct:0 },
+    { q: "9. Welches Wort passt in den Satz: Ich habe Angst ______ Spinnen.", a:["vor","mit","auf"], correct:0 },
+    { q: "10. Satzbildung korrekt?", a:["Obwohl er krank war, ging er zur Arbeit.","Obwohl er krank, er ging zur Arbeit.","Obwohl er war krank, er geht zur Arbeit."], correct:0 },
+    { q: "11. Übersetze: 'Das Wetter ist schön, trotzdem gehe ich nicht raus.'", a:["The weather is nice, yet I don't go outside.","The weather is bad, I go outside.","The weather is nice, so I go outside."], correct:0 },
+    { q: "12. Ergänze: Ich weiß nicht, ______ er kommt.", a:["ob","wann","wie"], correct:0 },
+    { q: "13. Welche Form passt? 'Wenn ich mehr Geld hätte, ______ ich ein Auto.'", a:["würde kaufen","kauft","kaufe"], correct:0 },
+    { q: "14. Relativsatz: Das ist der Mann, ______ mir geholfen hat.", a:["der","die","das"], correct:0 },
+    { q: "15. Modalverb: Du ______ nicht so viel essen.", a:["sollst","musst","darfst"], correct:0 },
+    { q: "16. Welche Zeitform? 'Ich hatte gegessen, bevor ich ins Kino ging.'", a:["Plusquamperfekt","Präsens","Futur I"], correct:0 },
+    { q: "17. Ergänze: Ich hoffe, dass er ______ gesund ist.", a:["noch","schon","nicht"], correct:0 },
+    { q: "18. Ausdruck passend: 'Ich stimme dir ______.'", a:["zu","auf","mit"], correct:0 },
+    { q: "19. Wortschatz: Synonym für 'beginnen'", a:["anfangen","beenden","laufen"], correct:0 },
+    { q: "20. Satzbau korrekt? 'Er hat mir gesagt, dass er morgen kommt.'", a:["✔ korrekt","falsch1","falsch2"], correct:0 }
+];
 
-      <div class="question">
-        <h3>2. Ergänze: Wenn ich Zeit habe, ___ ich ins Kino.</h3>
-        <label><input type="radio" name="q2" value="a"> gehe</label>
-        <label><input type="radio" name="q2" value="b"> ginge</label>
-        <label><input type="radio" name="q2" value="c"> gegangen</label>
-      </div>
+// Génération dynamique HTML
+document.write(
+    questions.map((q,i)=>`
+    <div class="question">
+        <p><strong>${q.q}</strong></p>
+        ${q.a.map((opt,j)=>`
+            <label><input type="radio" name="q${i}" value="${j}"> ${opt}</label><br>
+        `).join("")}
+    </div>
+    `).join("")
+);
+</script>
 
-      <div class="question">
-        <h3>3. Übersetze: „Ich habe Lust, ins Theater zu gehen.“</h3>
-        <label><input type="radio" name="q3" value="a"> J’ai envie d’aller au théâtre.</label>
-        <label><input type="radio" name="q3" value="b"> Je déteste le théâtre.</label>
-        <label><input type="radio" name="q3" value="c"> Je vais souvent au théâtre.</label>
-      </div>
+<button type="button" onclick="corriger()">Voir les résultats</button>
 
-      <div class="question">
-        <h3>4. Was bedeutet: „Es kommt darauf an“?</h3>
-        <label><input type="radio" name="q4" value="a"> Ça dépend.</label>
-        <label><input type="radio" name="q4" value="b"> C’est sûr.</label>
-        <label><input type="radio" name="q4" value="c"> Pas du tout.</label>
-      </div>
+</form>
 
-      <div class="question">
-        <h3>5. Wähle die richtige Zeitform: Ich ___ gestern meine Hausaufgaben gemacht.</h3>
-        <label><input type="radio" name="q5" value="a"> mache</label>
-        <label><input type="radio" name="q5" value="b"> habe</label>
-        <label><input type="radio" name="q5" value="c"> habe gemacht</label>
-      </div>
+<div id="resultat"></div>
+</div>
 
-      <div class="question">
-        <h3>6. Ergänze: Ich interessiere mich sehr ___ Musik.</h3>
-        <label><input type="radio" name="q6" value="a"> über</label>
-        <label><input type="radio" name="q6" value="b"> für</label>
-        <label><input type="radio" name="q6" value="c"> an</label>
-      </div>
+<script>
+function corriger() {
+    let score = 0;
+    let output = "<h2>Résultats :</h2>";
 
-      <div class="question">
-        <h3>7. Was passt? – Ich bin müde, ___ ich spät ins Bett gegangen bin.</h3>
-        <label><input type="radio" name="q7" value="a"> weil</label>
-        <label><input type="radio" name="q7" value="b"> obwohl</label>
-        <label><input type="radio" name="q7" value="c"> dass</label>
-      </div>
+    questions.forEach((q,i)=>{
+        const user = document.querySelector(`input[name='q${i}']:checked`);
+        if (!user) {
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='wrong'>❌ Pas de réponse</span><br>
+            Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;
+        } 
+        else if (parseInt(user.value) === q.correct) {
+            score++;
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='correct'>✔ Bonne réponse</span></p>`;
+        } 
+        else {
+            output += `<p><strong>${i+1}. ${q.q}</strong><br>
+            <span class='wrong'>❌ Mauvaise réponse</span><br>
+            Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;
+        }
+    });
 
-      <div class="question">
-        <h3>8. Ergänze: Wenn ich mehr Geld hätte, ___ ich ein Auto kaufen.</h3>
-        <label><input type="radio" name="q8" value="a"> würde</label>
-        <label><input type="radio" name="q8" value="b"> werde</label>
-        <label><input type="radio" name="q8" value="c"> habe</label>
-      </div>
-
-      <div class="question">
-        <h3>9. Übersetze: „Er hat den Zug verpasst.“</h3>
-        <label><input type="radio" name="q9" value="a"> Il a raté le train.</label>
-        <label><input type="radio" name="q9" value="b"> Il a pris le train.</label>
-        <label><input type="radio" name="q9" value="c"> Il a conduit le train.</label>
-      </div>
-
-      <div class="question">
-        <h3>10. Wähle die richtige Antwort: Wie lange bleibst du in Deutschland?</h3>
-        <label><input type="radio" name="q10" value="a"> Ich bleibe für drei Wochen.</label>
-        <label><input type="radio" name="q10" value="b"> Ich bleibe seit drei Wochen.</label>
-        <label><input type="radio" name="q10" value="c"> Ich bleibe drei Wochen her.</label>
-      </div>
-
-      <button type="button" onclick="submitQuiz()">Voir mon résultat</button>
-    </form>
-
-    <div id="result" class="result"></div>
-  </div>
-
-  <script>
-    function submitQuiz() {
-      const answers = {
-        q1: "b",
-        q2: "a",
-        q3: "a",
-        q4: "a",
-        q5: "c",
-        q6: "b",
-        q7: "a",
-        q8: "a",
-        q9: "a",
-        q10: "a"
-      };
-
-      let score = 0;
-      let total = Object.keys(answers).length;
-
-      for (let q in answers) {
-        const selected = document.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === answers[q]) score++;
-      }
-
-      const result = document.getElementById("result");
-      result.style.display = "block";
-
-      let message = "";
-      if (score <= 4) message = "Encore un peu d'effort 😅 – Continuez à pratiquer.";
-      else if (score <= 7) message = "Bon niveau B1 👏 – Vous pouvez communiquer dans la plupart des situations.";
-      else message = "Excellent 🎯 – Vous êtes prêt pour le niveau B2 !";
-
-      result.innerHTML = `<h2>Résultat : ${score}/${total}</h2><p>${message}</p>`;
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    }
-  </script>
+    output += `<h3>Score final : ${score} / ${questions.length}</h3>`;
+    document.getElementById("resultat").innerHTML = output;
+    document.getElementById("resultat").style.display = "block";
+}
+</script>
 
 </body>
 </html>

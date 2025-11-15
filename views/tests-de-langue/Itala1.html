@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<title>Test Italien A1 - Italien</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    body {
+        background: #f7f7f7;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    /* Bandeau italien */
+    .header-italy {
+        display: flex;
+        height: 12px;
+    }
+    .green { background:#009246; width:33.33%; }
+    .white { background:#ffffff; width:33.33%; }
+    .red   { background:#ce2b37; width:33.33%; }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #009246;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    label {
+        display: block;
+        margin: 8px 0;
+        cursor: pointer;
+    }
+
+    button {
+        background: #009246;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s;
+        margin-top: 20px;
+    }
+    button:hover {
+        background: #ce2b37;
+    }
+
+    .results {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        background: #e8ffe8;
+        border-left: 5px solid #009246;
+        display: none;
+    }
+
+    .correct { color: #009246; font-weight: bold; }
+    .wrong { color: #ce2b37; font-weight: bold; }
+
+</style>
+</head>
+<body>
+
+<div class="header-italy">
+    <div class="green"></div>
+    <div class="white"></div>
+    <div class="red"></div>
+</div>
+
+<div class="container">
+    <h1>🇮🇹 Test de Niveau Italien – A1</h1>
+    <p style="text-align:center;">Répondez aux 10 questions puis cliquez sur "Voir les résultats".</p>
+
+    <!-- QUESTIONS -->
+    <form id="quizForm">
+
+        <div class="question">
+            <h3>1. Comment dit-on “Bonjour” en italien ?</h3>
+            <label><input type="radio" name="q1" value="a"> Hola</label>
+            <label><input type="radio" name="q1" value="b"> Bonjour</label>
+            <label><input type="radio" name="q1" value="c"> Ciao</label>
+        </div>
+
+        <div class="question">
+            <h3>2. Que signifie “Come stai?”</h3>
+            <label><input type="radio" name="q2" value="a"> Où vas-tu ?</label>
+            <label><input type="radio" name="q2" value="b"> Comment vas-tu ?</label>
+            <label><input type="radio" name="q2" value="c"> Quel âge as-tu ?</label>
+        </div>
+
+        <div class="question">
+            <h3>3. Traduction : “Grazie”</h3>
+            <label><input type="radio" name="q3" value="a"> Merci</label>
+            <label><input type="radio" name="q3" value="b"> Désolé</label>
+            <label><input type="radio" name="q3" value="c"> Bonjour</label>
+        </div>
+
+        <div class="question">
+            <h3>4. Complète : “Mi chiamo …”</h3>
+            <label><input type="radio" name="q4" value="a"> J’habite à…</label>
+            <label><input type="radio" name="q4" value="b"> Je m’appelle…</label>
+            <label><input type="radio" name="q4" value="c"> Je viens de…</label>
+        </div>
+
+        <div class="question">
+            <h3>5. Quel est le mot italien pour “Maison” ?</h3>
+            <label><input type="radio" name="q5" value="a"> Casa</label>
+            <label><input type="radio" name="q5" value="b"> Casaña</label>
+            <label><input type="radio" name="q5" value="c"> Maison</label>
+        </div>
+
+        <div class="question">
+            <h3>6. “Uno, due, tre” signifie :</h3>
+            <label><input type="radio" name="q6" value="a"> 1, 2, 3</label>
+            <label><input type="radio" name="q6" value="b"> 3, 2, 1</label>
+            <label><input type="radio" name="q6" value="c"> 10, 20, 30</label>
+        </div>
+
+        <div class="question">
+            <h3>7. “Per favore” veut dire :</h3>
+            <label><input type="radio" name="q7" value="a"> S'il te plaît</label>
+            <label><input type="radio" name="q7" value="b"> À demain</label>
+            <label><input type="radio" name="q7" value="c"> Bienvenue</label>
+        </div>
+
+        <div class="question">
+            <h3>8. Quelle phrase est correcte ?</h3>
+            <label><input type="radio" name="q8" value="a"> Io mangio una mela.</label>
+            <label><input type="radio" name="q8" value="b"> Io mangia una mela.</label>
+            <label><input type="radio" name="q8" value="c"> Io mangi una mela.</label>
+        </div>
+
+        <div class="question">
+            <h3>9. Comment dit-on “Oui” en italien ?</h3>
+            <label><input type="radio" name="q9" value="a"> Yes</label>
+            <label><input type="radio" name="q9" value="b"> Sì</label>
+            <label><input type="radio" name="q9" value="c"> Oui</label>
+        </div>
+
+        <div class="question">
+            <h3>10. “Arrivederci” signifie :</h3>
+            <label><input type="radio" name="q10" value="a"> Salut !</label>
+            <label><input type="radio" name="q10" value="b"> À bientôt</label>
+            <label><input type="radio" name="q10" value="c"> Au revoir</label>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Voir les résultats</button>
+    </form>
+
+    <!-- RESULTATS -->
+    <div id="results" class="results"></div>
+
+</div>
+
+<script>
+function calculateScore() {
+    let answers = {
+        q1: "c",
+        q2: "b",
+        q3: "a",
+        q4: "b",
+        q5: "a",
+        q6: "a",
+        q7: "a",
+        q8: "a",
+        q9: "b",
+        q10:"c"
+    };
+
+    let form = document.getElementById("quizForm");
+    let resultsDiv = document.getElementById("results");
+    let score = 0;
+    let correctionHTML = "<h2>Résultats :</h2>";
+
+    for (let q in answers) {
+        let userAnswer = form[q].value;
+
+        if (userAnswer === answers[q]) {
+            score++;
+            correctionHTML += `<p><strong>${q} :</strong> <span class='correct'>Correct ✔️</span></p>`;
+        } else {
+            correctionHTML += `<p><strong>${q} :</strong> <span class='wrong'>Faux ❌</span> (Bonne réponse : <b>${answers[q]}</b>)</p>`;
+        }
+    }
+
+    correctionHTML += `<h3>Votre score : ${score}/10</h3>`;
+
+    if (score <= 4) {
+        correctionHTML += "<p>Niveau A1 non acquis. Continuez à pratiquer ! 🇮🇹</p>";
+    } else if (score <= 7) {
+        correctionHTML += "<p>Bon début ! Votre niveau A1 est en cours. 💪</p>";
+    } else {
+        correctionHTML += "<p>Excellent ! Vous maîtrisez le niveau A1 🎉</p>";
+    }
+
+    resultsDiv.innerHTML = correctionHTML;
+    resultsDiv.style.display = "block";
+}
+</script>
+
+</body>
+</html>

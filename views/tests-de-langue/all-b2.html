@@ -1,191 +1,81 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
-  <title>Test de Niveau B2 - Allemand</title>
-  <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f0f0f;
-      color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      background: linear-gradient(90deg, #1a1a1a, #242424);
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    header h1 {
-      margin: 0;
-      color: #00bfa6;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
-
-    .container {
-      max-width: 800px;
-      width: 90%;
-      background-color: #1c1c1c;
-      margin-top: 40px;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 191, 166, 0.3);
-    }
-
-    .question {
-      margin-bottom: 25px;
-    }
-
-    .question h3 {
-      margin-bottom: 10px;
-      color: #00bfa6;
-    }
-
-    label {
-      display: block;
-      background: #2a2a2a;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    input[type="radio"] {
-      margin-right: 10px;
-    }
-
-    label:hover {
-      background: #333;
-    }
-
-    button {
-      display: block;
-      margin: 20px auto;
-      padding: 12px 25px;
-      background-color: #00bfa6;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #00a58d;
-    }
-
-    .result {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 20px;
-      color: #00bfa6;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<title>Test Deutsch B2 – Goethe Niveau</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+body {font-family: "poppins", sans-serif; background: linear-gradient(to bottom, black, red, yellow); color: #fff; padding: 20px;}
+.container {max-width:900px;margin:auto;background: rgba(0,0,0,0.75); padding:20px; border-radius:10px;}
+h1 {text-align:center;color:yellow;}
+.question {background: rgba(255,255,255,0.1); padding:15px; margin-bottom:15px; border-radius:8px;}
+button {background:red;color:#fff;border:none;padding:12px 20px;font-size:16px;border-radius:8px;cursor:pointer;}
+button:hover {background:yellow;color:black;}
+#resultat {background: rgba(255,255,255,0.2); padding:20px;margin-top:20px;border-radius:8px;display:none;}
+.correct {color:#90ee90;font-weight:bold;}
+.wrong {color:#ff8080;font-weight:bold;}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Test de Niveau B2 - Allemand</h1>
-  </header>
+<div class="container">
+<h1>Test de Niveau Allemand B2 – Goethe</h1>
+<p>Répondez aux 20 questions pour évaluer votre niveau B2.</p>
+<form id="quiz">
+<script>
+const questions = [
+{q:"1. Ergänze: Ich wünschte, ich ______ mehr Zeit hätte.",a:["hätte","habe","werde"],correct:0},
+{q:"2. Welches Wort passt? Er sprach leise, ______ niemand ihn hörte.",a:["damit","obwohl","weil"],correct:1},
+{q:"3. Synonym für 'entscheiden'",a:["beschließen","vergessen","laufen"],correct:0},
+{q:"4. Konjunktiv II: Wenn ich reich wäre, ______ ich um die Welt.",a:["reisen würde","reist","gereist"],correct:0},
+{q:"5. Präposition: Ich erinnere mich ______ meine Kindheit.",a:["an","auf","für"],correct:0},
+{q:"6. Passende Wendung: 'Ich habe keine Ahnung, ______ er meint.'",a:["was","wie","wo"],correct:0},
+{q:"7. Welche Aussage ist korrekt? – 'Trotz des Regens ...'",a:["gingen wir spazieren","wir gehen spazieren","gehen wir spazieren"],correct:0},
+{q:"8. Welches Wort passt? Er hat das Problem ______ geschickt gelöst.",a:["geschickt","geschicktet","geschicktlich"],correct:0},
+{q:"9. Ausdruck: 'sich bemühen' bedeutet ...",a:["to make an effort","to sleep","to run"],correct:0},
+{q:"10. Welche Form passt? – 'Es ist wichtig, dass du pünktlich ______.'",a:["kommst","kommstest","gekommen"],correct:0},
+{q:"11. Gegenteil von 'verheiratet'",a:["ledig","geschieden","verlobt"],correct:0},
+{q:"12. Passender Satz: 'Obwohl er krank war, ...'",a:["arbeitete er weiter","er arbeitete weiter","er arbeitet weiter"],correct:0},
+{q:"13. Relativsatz: Das ist die Frau, ______ mir geholfen hat.",a:["die","der","das"],correct:0},
+{q:"14. Modalverb: Du ______ das Formular ausfüllen.",a:["musst","kannst","sollst"],correct:0},
+{q:"15. Zeitform: 'Nachdem ich gegessen hatte, ...'",a:["ging ich spazieren","ich gehe spazieren","ich werde spazieren gehen"],correct:0},
+{q:"16. Ergänze: Ich zweifle daran, dass er ______ kann.",a:["es","das","dies"],correct:0},
+{q:"17. Ausdruck: 'auf etwas Wert legen' bedeutet ...",a:["to value something","to ignore something","to destroy something"],correct:0},
+{q:"18. Synonym: 'vorbereiten'",a:["planen","vergessen","laufen"],correct:0},
+{q:"19. Satzbau korrekt? – 'Ich hoffe, dass du morgen kommst.'",a:["✔ korrekt","falsch1","falsch2"],correct:0},
+{q:"20. Konjunktion: Ich bleibe zu Hause, ______ es regnet.",a:["weil","obwohl","denn"],correct:1}
+];
 
-  <div class="container">
-    <form id="quizForm">
-      <div class="question">
-        <h3>1. Ich würde gern kommen, ______ ich habe keine Zeit.</h3>
-        <label><input type="radio" name="q1" value="a"> wenn</label>
-        <label><input type="radio" name="q1" value="b"> aber</label>
-        <label><input type="radio" name="q1" value="c"> obwohl</label>
-      </div>
+// Génération HTML
+document.write(
+questions.map((q,i)=>`
+<div class="question">
+<p><strong>${q.q}</strong></p>
+${q.a.map((opt,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${opt}</label><br>`).join("")}
+</div>`).join("")
+);
+</script>
 
-      <div class="question">
-        <h3>2. Er tut so, ______ er alles wüsste.</h3>
-        <label><input type="radio" name="q2" value="a"> als ob</label>
-        <label><input type="radio" name="q2" value="b"> obwohl</label>
-        <label><input type="radio" name="q2" value="c"> weil</label>
-      </div>
+<button type="button" onclick="corriger()">Voir les résultats</button>
+</form>
+<div id="resultat"></div>
+</div>
 
-      <div class="question">
-        <h3>3. Wenn ich mehr Zeit ______, würde ich Deutsch besser lernen.</h3>
-        <label><input type="radio" name="q3" value="a"> hätte</label>
-        <label><input type="radio" name="q3" value="b"> habe</label>
-        <label><input type="radio" name="q3" value="c"> gehabt</label>
-      </div>
-
-      <div class="question">
-        <h3>4. Das Buch, ______ du mir empfohlen hast, war wirklich interessant.</h3>
-        <label><input type="radio" name="q4" value="a"> was</label>
-        <label><input type="radio" name="q4" value="b"> das</label>
-        <label><input type="radio" name="q4" value="c"> das du</label>
-      </div>
-
-      <div class="question">
-        <h3>5. Ich bin sicher, dass er die Prüfung ______.</h3>
-        <label><input type="radio" name="q5" value="a"> bestehen</label>
-        <label><input type="radio" name="q5" value="b"> bestanden</label>
-        <label><input type="radio" name="q5" value="c"> bestanden hat</label>
-      </div>
-
-      <div class="question">
-        <h3>6. Sie hat den Zug verpasst, ______ sie zu spät aufgestanden ist.</h3>
-        <label><input type="radio" name="q6" value="a"> weil</label>
-        <label><input type="radio" name="q6" value="b"> trotzdem</label>
-        <label><input type="radio" name="q6" value="c"> obwohl</label>
-      </div>
-
-      <div class="question">
-        <h3>7. Ich freue mich darauf, dich bald wiederzusehen. → Welche Struktur?</h3>
-        <label><input type="radio" name="q7" value="a"> zu + Infinitiv</label>
-        <label><input type="radio" name="q7" value="b"> dass + Nebensatz</label>
-        <label><input type="radio" name="q7" value="c"> ohne + zu</label>
-      </div>
-
-      <button type="button" onclick="checkAnswers()">Voir le résultat</button>
-    </form>
-
-    <div id="result" class="result"></div>
-  </div>
-
-  <script>
-    function checkAnswers() {
-      const answers = {
-        q1: "b",
-        q2: "a",
-        q3: "a",
-        q4: "b",
-        q5: "c",
-        q6: "a",
-        q7: "a"
-      };
-
-      let score = 0;
-      const form = document.forms["quizForm"];
-
-      for (const key in answers) {
-        if (form[key].value === answers[key]) {
-          score++;
-        }
-      }
-
-      const result = document.getElementById("result");
-      result.innerHTML = `✅ Vous avez obtenu ${score}/7 points. ${
-        score >= 5 ? "Excellent niveau B2 !" : "Continuez à vous entraîner !"
-      }`;
-    }
-  </script>
-
+<script>
+function corriger(){
+let score=0;
+let output="<h2>Résultats :</h2>";
+questions.forEach((q,i)=>{
+const user=document.querySelector(`input[name='q${i}']:checked`);
+if(!user){output+=`<p><strong>${i+1}. ${q.q}</strong><br><span class='wrong'>❌ Pas de réponse</span><br>Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;}
+else if(parseInt(user.value)===q.correct){score++;output+=`<p><strong>${i+1}. ${q.q}</strong><br><span class='correct'>✔ Bonne réponse</span></p>`;}
+else{output+=`<p><strong>${i+1}. ${q.q}</strong><br><span class='wrong'>❌ Mauvaise réponse</span><br>Correction : <span class='correct'>${q.a[q.correct]}</span></p>`;}
+});
+output+=`<h3>Score final : ${score} / ${questions.length}</h3>`;
+document.getElementById("resultat").innerHTML=output;
+document.getElementById("resultat").style.display="block";
+}
+</script>
 </body>
 </html>

@@ -206,17 +206,29 @@ function changeOption(option) {
     typing.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
     body.appendChild(typing);
     body.scrollTop = body.scrollHeight;
-    setTimeout(()=> {
+
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userText })
+    })
+    .then(async (r) => {
+      const json = await r.json();
       body.removeChild(typing);
-      // réponses simples basées sur mots-clés
-      const ut = userText.toLowerCase();
-      if (ut.includes('formation') || ut.includes('formations')) appendMessage("Nos formations couvrent : Dév Web, Infographie, Bureautique. Voir les dates et tarifs sur la page Formations.");
-      else if (ut.includes('langue') || ut.includes('voyage')) appendMessage("Langues & Voyage : cours intensifs + modules préparation voyage. Contactez-nous via +237 6 96 55 39 81.");
-      else if (ut.includes('site') || ut.includes('web')) appendMessage("Pour la création de site, nous proposons packs Starter et Pro. Voulez-vous être contacté ?");
-      else appendMessage("Merci pour votre message — un membre de l'équipe vous répondra bientôt. Pour contact rapide : contact@mygiftcenter.com");
+      if (r.ok && json && json.reply) {
+        appendMessage(json.reply, 'bot-message');
+      } else {
+        appendMessage(json.error || "Désolé, je n'ai pas de réponse pour le moment.", 'bot-message');
+      }
       body.scrollTop = body.scrollHeight;
-    }, 900 + Math.random()*800);
+    })
+    .catch(err => {
+      if (body.contains(typing)) body.removeChild(typing);
+      appendMessage("Erreur de connexion au serveur.", 'bot-message');
+      console.error(err);
+    });
   }
+
 
   if (form) {
     form.addEventListener('submit', (e) => {

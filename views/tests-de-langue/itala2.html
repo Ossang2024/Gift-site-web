@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test d'italien A2 - Italie</title>
+    <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-top: 10px solid #008C45; /* Vert Italie */
+            border-bottom: 10px solid #CD212A; /* Rouge Italie */
+        }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            color: #008C45;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .question {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #CD212A;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #008C45, #F4F5F0, #CD212A);
+            color: black;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+            padding: 20px;
+            background: #F4F5F0;
+            border-left: 6px solid #008C45;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">🇮🇹 Test di livello Italiano – A2</h1>
+    <p class="subtitle">Rispondi alle 20 domande e scopri il tuo livello !</p>
+
+    <form id="quizForm">
+
+        <!-- ======== QUESTIONS ======== -->
+
+        <div class="question">
+            <p>1. Come si dice “Je dois partir” in italiano ?</p>
+            <label><input type="radio" name="q1" value="a"> Devo partire</label>
+            <label><input type="radio" name="q1" value="b"> Voglio partire</label>
+            <label><input type="radio" name="q1" value="c"> Sto partendo</label>
+        </div>
+
+        <div class="question">
+            <p>2. Qual è la forma corretta ? “Noi ________ al cinema stasera.”</p>
+            <label><input type="radio" name="q2" value="a"> andiamo</label>
+            <label><input type="radio" name="q2" value="b"> andremo</label>
+            <label><input type="radio" name="q2" value="c"> andavamo</label>
+        </div>
+
+        <div class="question">
+            <p>3. Come si dice “J’ai besoin d’aide” ?</p>
+            <label><input type="radio" name="q3" value="a"> Ho bisogno di aiuto</label>
+            <label><input type="radio" name="q3" value="b"> Ho bisogno aiutare</label>
+            <label><input type="radio" name="q3" value="c"> Bisogno aiuto</label>
+        </div>
+
+        <div class="question">
+            <p>4. Completa: “Loro non _______ venire domani.”</p>
+            <label><input type="radio" name="q4" value="a"> possono</label>
+            <label><input type="radio" name="q4" value="b"> potuto</label>
+            <label><input type="radio" name="q4" value="c"> potendo</label>
+        </div>
+
+        <div class="question">
+            <p>5. “Quanto costa?” significa…</p>
+            <label><input type="radio" name="q5" value="a"> Où est-ce ?</label>
+            <label><input type="radio" name="q5" value="b"> Combien ça coûte ?</label>
+            <label><input type="radio" name="q5" value="c"> À quelle heure ?</label>
+        </div>
+
+        <div class="question">
+            <p>6. Scegli la frase corretta :</p>
+            <label><input type="radio" name="q6" value="a"> Io sono fame</label>
+            <label><input type="radio" name="q6" value="b"> Io ho fame</label>
+            <label><input type="radio" name="q6" value="c"> Io faccio fame</label>
+        </div>
+
+        <div class="question">
+            <p>7. “Mi piace” significa :</p>
+            <label><input type="radio" name="q7" value="a"> Je déteste</label>
+            <label><input type="radio" name="q7" value="b"> J’aime</label>
+            <label><input type="radio" name="q7" value="c"> J’essaie</label>
+        </div>
+
+        <div class="question">
+            <p>8. Completa : “Tu __________ italiano molto bene.”</p>
+            <label><input type="radio" name="q8" value="a"> parli</label>
+            <label><input type="radio" name="q8" value="b"> parlavi</label>
+            <label><input type="radio" name="q8" value="c"> parlerai</label>
+        </div>
+
+        <div class="question">
+            <p>9. Come si dice : “Nous habitons à Douala” ?</p>
+            <label><input type="radio" name="q9" value="a"> Abito a Douala</label>
+            <label><input type="radio" name="q9" value="b"> Abitiamo a Douala</label>
+            <label><input type="radio" name="q9" value="c"> Abitano a Douala</label>
+        </div>
+
+        <div class="question">
+            <p>10. “È tardi” significa :</p>
+            <label><input type="radio" name="q10" value="a"> Il est tôt</label>
+            <label><input type="radio" name="q10" value="b"> Il est tard</label>
+            <label><input type="radio" name="q10" value="c"> Il est midi</label>
+        </div>
+
+        <div class="question">
+            <p>11. Completa: “Io __________ una macchina nuova.”</p>
+            <label><input type="radio" name="q11" value="a"> compro</label>
+            <label><input type="radio" name="q11" value="b"> compravo</label>
+            <label><input type="radio" name="q11" value="c"> comprerò</label>
+        </div>
+
+        <div class="question">
+            <p>12. “Per favore” significa :</p>
+            <label><input type="radio" name="q12" value="a"> S’il te plaît</label>
+            <label><input type="radio" name="q12" value="b"> Merci</label>
+            <label><input type="radio" name="q12" value="c"> Excuse-moi</label>
+        </div>
+
+        <div class="question">
+            <p>13. Come si dice : “Elle travaille ici” ?</p>
+            <label><input type="radio" name="q13" value="a"> Lei lavoro qui</label>
+            <label><input type="radio" name="q13" value="b"> Lei lavora qui</label>
+            <label><input type="radio" name="q13" value="c"> Lei lavorare qui</label>
+        </div>
+
+        <div class="question">
+            <p>14. Completa : “Io non _______ uscire oggi.”</p>
+            <label><input type="radio" name="q14" value="a"> voglio</label>
+            <label><input type="radio" name="q14" value="b"> voluto</label>
+            <label><input type="radio" name="q14" value="c"> volere</label>
+        </div>
+
+        <div class="question">
+            <p>15. “Sto cercando lavoro” significa :</p>
+            <label><input type="radio" name="q15" value="a"> Je cherche du travail</label>
+            <label><input type="radio" name="q15" value="b"> Je travaille</label>
+            <label><input type="radio" name="q15" value="c"> Je quitte le travail</label>
+        </div>
+
+        <div class="question">
+            <p>16. Completa : “Dove ________ tu ?”</p>
+            <label><input type="radio" name="q16" value="a"> vivi</label>
+            <label><input type="radio" name="q16" value="b"> vivrai</label>
+            <label><input type="radio" name="q16" value="c"> vivevi</label>
+        </div>
+
+        <div class="question">
+            <p>17. Come si dice : “Je suis en retard” ?</p>
+            <label><input type="radio" name="q17" value="a"> Sono presto</label>
+            <label><input type="radio" name="q17" value="b"> Sono in ritardo</label>
+            <label><input type="radio" name="q17" value="c"> Sono libero</label>
+        </div>
+
+        <div class="question">
+            <p>18. “A che ora?” significa :</p>
+            <label><input type="radio" name="q18" value="a"> Pourquoi ?</label>
+            <label><input type="radio" name="q18" value="b"> À quelle heure ?</label>
+            <label><input type="radio" name="q18" value="c"> Où ça ?</label>
+        </div>
+
+        <div class="question">
+            <p>19. Completa : “Domani noi _______ a Roma.”</p>
+            <label><input type="radio" name="q19" value="a"> andiamo</label>
+            <label><input type="radio" name="q19" value="b"> andremo</label>
+            <label><input type="radio" name="q19" value="c"> siamo andati</label>
+        </div>
+
+        <div class="question">
+            <p>20. Come si dice : “Je veux apprendre l’italien” ?</p>
+            <label><input type="radio" name="q20" value="a"> Voglio imparare l’italiano</label>
+            <label><input type="radio" name="q20" value="b"> Voglio imparando l’italiano</label>
+            <label><input type="radio" name="q20" value="c"> Voglio imparato l’italiano</label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()" class="btn">Vedi il risultato</button>
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+    function submitQuiz() {
+
+    const correctAnswers = {
+        q1: "a", q2: "a", q3: "a", q4: "a", q5: "b",
+        q6: "b", q7: "b", q8: "a", q9: "b", q10: "b",
+        q11: "a", q12: "a", q13: "b", q14: "a", q15: "a",
+        q16: "a", q17: "b", q18: "b", q19: "b", q20: "a"
+    };
+
+    let score = 0;
+    let total = 20;
+    let resultHTML = "<h2>Risultato :</h2>";
+
+    for (let key in correctAnswers) {
+        let userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+        
+        if (userAnswer) {
+            if (userAnswer.value === correctAnswers[key]) {
+                score++;
+                resultHTML += `<p><strong>${key}</strong> ✔ Correcto</p>`;
+            } else {
+                resultHTML += `<p><strong>${key}</strong> ❌ Risposta corretta: ${correctAnswers[key]}</p>`;
+            }
+        } else {
+            resultHTML += `<p><strong>${key}</strong> ❌ Nessuna risposta — Corretta: ${correctAnswers[key]}</p>`;
+        }
+    }
+
+    resultHTML += `<h3>Punteggio finale : ${score}/${total}</h3>`;
+
+    document.getElementById("result").innerHTML = resultHTML;
+    }
+
+</script>
+</body>
+</html>

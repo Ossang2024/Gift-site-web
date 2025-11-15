@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+    <title>Test Italien B1 - Italien</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-left: 10px solid #008C45; /* Vert */
+            border-right: 10px solid #CD212A; /* Rouge */
+        }
+
+        .title {
+            text-align: center;
+            color: #008C45;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #CD212A;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #008C45, #F4F5F0, #CD212A);
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #F4F5F0;
+            border-left: 6px solid #008C45;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">🇮🇹 Test di Livello Italiano – B1</h1>
+    <p class="subtitle">Rispondi alle 20 domande e verifica il tuo livello intermedio.</p>
+
+    <form id="quizForm">
+
+        <!-- ============================
+                    DOMANDE (20)
+        ============================ -->
+
+        <div class="question">
+            <p>1. Completa: “Se non piove, _______ una passeggiata.”</p>
+            <label><input type="radio" name="q1" value="a"> farei</label>
+            <label><input type="radio" name="q1" value="b"> farò</label>
+            <label><input type="radio" name="q1" value="c"> feci</label>
+        </div>
+
+        <div class="question">
+            <p>2. “Mi sono reso conto” significa:</p>
+            <label><input type="radio" name="q2" value="a"> J’ai imaginé</label>
+            <label><input type="radio" name="q2" value="b"> Je me suis rendu compte</label>
+            <label><input type="radio" name="q2" value="c"> J’ai oublié</label>
+        </div>
+
+        <div class="question">
+            <p>3. Scegli la frase corretta:</p>
+            <label><input type="radio" name="q3" value="a"> Lui ha detto che viene</label>
+            <label><input type="radio" name="q3" value="b"> Lui ha detto che verrà</label>
+            <label><input type="radio" name="q3" value="c"> Lui diceva che venuto</label>
+        </div>
+
+        <div class="question">
+            <p>4. “Sto cercando di capire” significa:</p>
+            <label><input type="radio" name="q4" value="a"> J’essaie de comprendre</label>
+            <label><input type="radio" name="q4" value="b"> Je comprends</label>
+            <label><input type="radio" name="q4" value="c"> Je vais comprendre</label>
+        </div>
+
+        <div class="question">
+            <p>5. Completa: “È un film _______ parla di amicizia.”</p>
+            <label><input type="radio" name="q5" value="a"> che</label>
+            <label><input type="radio" name="q5" value="b"> cui</label>
+            <label><input type="radio" name="q5" value="c"> quale</label>
+        </div>
+
+        <div class="question">
+            <p>6. Qual è la forma corretta?</p>
+            <label><input type="radio" name="q6" value="a"> Ho deciso venire</label>
+            <label><input type="radio" name="q6" value="b"> Ho deciso di venire</label>
+            <label><input type="radio" name="q6" value="c"> Ho deciso per venire</label>
+        </div>
+
+        <div class="question">
+            <p>7. “Nonostante fosse stanco” significa:</p>
+            <label><input type="radio" name="q7" value="a"> Bien qu’il était fatigué</label>
+            <label><input type="radio" name="q7" value="b"> Parce qu’il est fatigué</label>
+            <label><input type="radio" name="q7" value="c"> Quand il est fatigué</label>
+        </div>
+
+        <div class="question">
+            <p>8. Completa: “Se avessi tempo, ti _______.”</p>
+            <label><input type="radio" name="q8" value="a"> aiuto</label>
+            <label><input type="radio" name="q8" value="b"> aiuterei</label>
+            <label><input type="radio" name="q8" value="c"> ho aiutato</label>
+        </div>
+
+        <div class="question">
+            <p>9. Scegli la frase corretta:</p>
+            <label><input type="radio" name="q9" value="a"> È più bello che utile</label>
+            <label><input type="radio" name="q9" value="b"> È più bello di utile</label>
+            <label><input type="radio" name="q9" value="c"> È bello che utile</label>
+        </div>
+
+        <div class="question">
+            <p>10. “Mi aspetto che lui arrivi” significa:</p>
+            <label><input type="radio" name="q10" value="a"> Je suis sûr qu’il arrive</label>
+            <label><input type="radio" name="q10" value="b"> Je m’attends à ce qu’il arrive</label>
+            <label><input type="radio" name="q10" value="c"> Je pense qu’il est arrivé</label>
+        </div>
+
+        <div class="question">
+            <p>11. Completa: “È importante _______ la verità.”</p>
+            <label><input type="radio" name="q11" value="a"> dire</label>
+            <label><input type="radio" name="q11" value="b"> dicendo</label>
+            <label><input type="radio" name="q11" value="c"> detto</label>
+        </div>
+
+        <div class="question">
+            <p>12. “Lui ha smesso di fumare” significa:</p>
+            <label><input type="radio" name="q12" value="a"> Il fume encore</label>
+            <label><input type="radio" name="q12" value="b"> Il a arrêté de fumer</label>
+            <label><input type="radio" name="q12" value="c"> Il veut fumer</label>
+        </div>
+
+        <div class="question">
+            <p>13. Scegli la forma corretta:</p>
+            <label><input type="radio" name="q13" value="a"> È il ragazzo di cui ti ho parlato</label>
+            <label><input type="radio" name="q13" value="b"> È il ragazzo che ti ho parlato</label>
+            <label><input type="radio" name="q13" value="c"> È il ragazzo quale ti ho parlato</label>
+        </div>
+
+        <div class="question">
+            <p>14. “Far finta” significa:</p>
+            <label><input type="radio" name="q14" value="a"> Faire semblant</label>
+            <label><input type="radio" name="q14" value="b"> Faire attention</label>
+            <label><input type="radio" name="q14" value="c"> Faire vite</label>
+        </div>
+
+        <div class="question">
+            <p>15. Completa: “È il film più bello che io _______ visto.”</p>
+            <label><input type="radio" name="q15" value="a"> abbia</label>
+            <label><input type="radio" name="q15" value="b"> ho</label>
+            <label><input type="radio" name="q15" value="c"> avrei</label>
+        </div>
+
+        <div class="question">
+            <p>16. “Secondo me” significa:</p>
+            <label><input type="radio" name="q16" value="a"> À mon avis</label>
+            <label><input type="radio" name="q16" value="b"> Sans doute</label>
+            <label><input type="radio" name="q16" value="c"> Peut-être</label>
+        </div>
+
+        <div class="question">
+            <p>17. Completa: “Più studio, _______ capisco.”</p>
+            <label><input type="radio" name="q17" value="a"> meno</label>
+            <label><input type="radio" name="q17" value="b"> più</label>
+            <label><input type="radio" name="q17" value="c"> niente</label>
+        </div>
+
+        <div class="question">
+            <p>18. Scegli la frase corretta:</p>
+            <label><input type="radio" name="q18" value="a"> Sono interessato a imparare l’italiano</label>
+            <label><input type="radio" name="q18" value="b"> Sono interessato imparare l’italiano</label>
+            <label><input type="radio" name="q18" value="c"> Sono interessato per imparare l’italiano</label>
+        </div>
+
+        <div class="question">
+            <p>19. “Lui è capace di farlo” significa:</p>
+            <label><input type="radio" name="q19" value="a"> Il ne sait pas le faire</label>
+            <label><input type="radio" name="q19" value="b"> Il est capable de le faire</label>
+            <label><input type="radio" name="q19" value="c"> Il refuse de le faire</label>
+        </div>
+
+        <div class="question">
+            <p>20. Completa: “Se studiassi di più, _______ voti migliori.”</p>
+            <label><input type="radio" name="q20" value="a"> prendi</label>
+            <label><input type="radio" name="q20" value="b"> prenderesti</label>
+            <label><input type="radio" name="q20" value="c"> hai preso</label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()" class="btn">Vedi il risultato</button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+    function submitQuiz() {
+
+    const correctAnswers = {
+        q1: "b", q2: "b", q3: "b", q4: "a", q5: "a",
+        q6: "b", q7: "a", q8: "b", q9: "a", q10: "b",
+        q11: "a", q12: "b", q13: "a", q14: "a", q15: "a",
+        q16: "a", q17: "b", q18: "a", q19: "b", q20: "b"
+    };
+
+    let score = 0;
+    let resultHTML = "<h2>Risultato :</h2>";
+
+    for (let key in correctAnswers) {
+        let userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+        
+        if (userAnswer) {
+            if (userAnswer.value === correctAnswers[key]) {
+                score++;
+                resultHTML += `<p><strong>${key}</strong> ✔ Correcto</p>`;
+            } else {
+                resultHTML += `<p><strong>${key}</strong> ❌ Risposta corretta: ${correctAnswers[key]}</p>`;
+            }
+        } else {
+            resultHTML += `<p><strong>${key}</strong> ❌ Nessuna risposta — Corretta: ${correctAnswers[key]}</p>`;
+        }
+    }
+
+    resultHTML += `<h3>Punteggio finale : ${score}/20</h3>`;
+
+    document.getElementById("result").innerHTML = resultHTML;
+    }
+</script>
+
+</body>
+</html>
