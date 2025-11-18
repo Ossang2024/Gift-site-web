@@ -369,100 +369,304 @@ header {
 
 
 
-.section1 {
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgb(245, 245, 245);
+/* .section1 {
+    padding: 50px;
+    background-color: rgb(208,242,241);
     display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-
-.section1 .head {
-    display: flex;
-    justify-content: center ;
-    flex-direction: column;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 80px;
+    justify-content: center;
+    gap: 50px;
+} */
+
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 20px;
 }
 
-.section1 .tete {
-    max-width: 150px;
+.first .left {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.section1 .head h1 {
-  font-size: 2.7rem;
+.first .left h1 {
+  font-size: 2.5rem;
   color: rgb(38,113,118);
-  text-transform: capitalize;
 }
 
-.section1 .head .div {
+.first .left div {
     height: 3px;
     width: 150px;
     background-color: rgb(53,144,67);
     border-radius: 50px;
 }
 
-.section1 .avantage {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.section1 .avantage .first {
-    display: flex;
-    align-items: center;
-    /* flex-direction: column; */
-    justify-content: center;
-    color: rgb(38,113,118);
-    text-align: center;
-}
-
-.section1 .trait-horizontal {
-    width: 200px;
-    height: 1px;
-    background-color: rgb(53,144,67);
-}
-
-.section1 .avantage .first h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-}
-
-
-.section1 .avantage .second .text {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 500px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.09);
-    text-align: center;
-}
-
-.section1 .avantage .second .text {
-    color: rgb(38,113,118);
-}
-
-.section1 .avantage p {
+.first .left p {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 14px;
   color: #555;
   line-height: 1.6;
+  text-align: justify;
+}
+
+.first .right img {
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.section2 {
+    padding: 50px 20px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.section2 h2 {
+    font-size: 2rem;
+    color: rgb(38,113,118);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.section2 .div {
+    height: 3px;
+    width: 150px;
+    background-color: rgb(53,144,67);
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+
+.section2 .text {
+    font-size: 17px;
+    color: #555;
+    line-height: 2.0;
+    text-align: center;
+    padding: 0px 120px;
+}
+
+
+.section2 .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.section2 .card {
+    background-color: rgb(248, 246, 246);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.section2 .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.section2 .card h3 {
+    font-size: 1.2rem;
+    color: rgb(38,113,118);
+    margin-bottom: 10px;
+}
+
+.section2 .card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.section2 .card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 300px;
+}
+
+.section2 p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgb(38,113,118);
+    font-size: 15px;
+    transition: ease-in-out 0.3s;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section2 p a:hover {
+    background-color: rgb(28, 80, 83);
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+      padding: 50px 20px;
+}
+
+.section3 .left {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section3 .left h2 {
+  font-size: 2rem;
+  color: rgb(38,113,118);
   text-align: center;
 }
 
-
-.section1 .avantage .second .trait-verticale {
-    height: 150px;
-    width: 1px;
+.section3 .left .div {
+    height: 3px;
+    width: 150px;
     background-color: rgb(53,144,67);
+    border-radius: 50px;
+    margin: 20px;
+}
+
+.section3 .left p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.section3 span {
+  color: rgb(38,113,118);
+  font-weight: bold;
+}
+
+.section3 .left a {
+    text-decoration: none;
+    color: blue;
+}
+
+.section3 .left ul {
+  /* list-style: none; */
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.section3 .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section3 .right div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* overlay above the image so hover triggers */
+}
+
+.section3 .right div a {
+    text-decoration: none;
+    color: #555;
+    background-color: white;
+    padding: 10px 10px ;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: ease-in-out 0.5s;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateY(-90%);
+    text-align: center;
+}
+
+.section3 .right div:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section3 .right div:hover a {
+    opacity: 1;
+    transform: translateY(0%);
+    color: rgb(38,113,118);
+}
+
+.section3 .right a span {
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+}
+
+.section3 .right a:hover span {
+    opacity: 1;
+}
+
+.section3 .right img {
+  max-width: 450px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1; /* keep image below overlay */
 }
 
 
@@ -476,6 +680,192 @@ header {
 
 
 
+
+
+
+
+.section4 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+
+.section4 h1 {
+    font-size: 2rem;
+    color: rgb(38,113,118);
+    text-align: center;
+}
+
+.section4 .div {
+    height: 3px;
+    width: 200px;
+    background-color: rgb(53,144,67);
+    border-radius: 50px;
+}
+
+.section4 .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.section4 .container div {
+  border: 4px solid rgb(38,113,118);
+  background-color: #fbfbfb;
+  color: #222;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-transform: capitalize;
+  padding: 10px 20px ;
+  text-align: center;
+  transition: ease-in-out 0.5s;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.section4 .container div:hover {
+  border: 4px solid #fbfbfb;
+  color: #fbfbfb;
+  background-color: rgb(38,113,118);
+  color: rgb(245, 245, 245);
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section5 {
+    padding: 50px 20px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section5 h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: rgb(28, 80, 83);
+}
+
+.section5 .div {
+    height: 3px;
+    width: 100px;
+    background-color: rgb(53,144,67);
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+.section5 .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.section5 .card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section5 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    background-color: rgb(38,113,118);
+    color: white;
+}
+
+.section5 .card:hover p {
+    transform: scale(1.8);
+}
+
+.section5 .card:hover ul {
+    color: white;
+}
+
+.section5 .card:hover h3 {
+    color: white;
+}
+
+.section5 .card:hover a {
+    background-color: white;
+    color: rgb(38,113,118);
+}
+
+
+
+.section5 .card h3 {
+    font-size: 1.5rem;
+    color: rgb(38,113,118);
+    margin-bottom: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.section5 .card ul {
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 0px;
+    font-size: 14px;
+    color: #555;
+    transition: ease-in-out 0.3s;
+}
+
+.section5 .card p {
+    font-size: 20px;
+    color: rgb(53,144,67);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+    transition: ease-in-out 0.3s;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.section5 .card a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgb(38,113,118);
+    font-size: 15px;
+    transition: ease-in-out 0.3s;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section5 .card a:hover {
+    background-color: rgb(28, 80, 83);
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+}
 
 
 
@@ -637,7 +1027,6 @@ header {
   padding: 50px 70px;
   color: #222;
   border-top: 4px solid rgba(38,113,118,0.12);
-  margin-top: 60px;
 }
 .site-footer .footer-top{
   display: flex;
