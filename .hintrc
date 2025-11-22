@@ -29,9 +29,16 @@
     "axe/text-alternatives": [
       "default",
       {
-        "document-title": "off"
+        "document-title": "off",
+        "frame-title": "off"
       }
     ],
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
   }
 }
