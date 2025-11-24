@@ -375,6 +375,7 @@ header {
 .section3 h2, .section3 h1 {
   font-size: 2.5rem;
   color: rgb(38,113,118);
+  text-align: center;
 }
 
 .section3 .containt h3 {
