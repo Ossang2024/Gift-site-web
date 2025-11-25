@@ -253,13 +253,13 @@ header {
     top: 0;
     width: 100%;
     min-height: 110vh;
-    background-image: url("../assets/images/WhatsApp\ Image\ 2025-03-16\ at\ 17.28.03_0fbb8f47.png");
+    background-image: url("https://i.pinimg.com/1200x/73/b8/6b/73b86b51aa8103128b479154c3cfd9d0.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .slider-wrapper .slider-item:nth-child(2)::before{
-    background-image: url(../assets/images/FLYERS_GRAPHIC_bon.jpg);
+    background-image: url(https://i.pinimg.com/1200x/af/04/53/af0453add219b36899f3f53ba3b490d3.jpg);
 }
 
 .slider-wrapper .slider-item:nth-child(3):before{
@@ -267,11 +267,11 @@ header {
 }
 
 .slider-wrapper .slider-item:nth-child(4):before{
-    background-image: url(../assets/images/couverture_bannière.jpg);
+    background-image: url(https://i.pinimg.com/736x/e4/bd/ad/e4bdadcde142e6988d98d18a0f6d2a7f.jpg);
 }
 
 .slider-wrapper .slider-item:nth-child(5):before{
-    background-image: url(../assets/images/HD8A4504\ copie.jpg);
+    background-image: url(https://i.pinimg.com/1200x/2c/bd/33/2cbd33b606344b4839fee5156cb50632.jpg);
 }
 
 .slider-wrapper .slider-item .slide-content {
@@ -566,9 +566,10 @@ header {
     min-height: 100vh;
     background-color: rgb(245, 245, 245);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
       padding: 50px 20px;
+      align-items: center;
 }
 
 .section4 .left {
@@ -626,6 +627,8 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: ease-in-out 0.3s;
+  overflow: hidden;
 }
 
 .section4 .right div {
@@ -685,10 +688,13 @@ header {
   max-width: 450px;
   border-radius: 10px;
   position: relative;
+  transition: ease-in-out 0.5s;
   z-index: 1; /* keep image below overlay */
 }
 
-
+.section4 .right:hover img{
+    transform: scale(1.2);
+}
 
 
 
