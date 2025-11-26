@@ -382,18 +382,19 @@ header {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    padding: 30px;
 }
 
-.section1 .left {
+/* .section1 .left {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
   padding: 50px 20px;
-}
+} */
 
 .section1 .left {
-  max-width: 500px;
+  max-width: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -488,12 +489,13 @@ header {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    margin-top: 50px;
+    padding: 50px 10px;
 }
 
 .section2 .section2-header h2 {
     font-size: 2.5rem;
     color: rgb(38,113,118);
+    text-align: center;
 }
 
 .section2 .section2-header div {
@@ -506,10 +508,10 @@ header {
 
 .section2 .section2-content1 {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center; */
+    /* justify-content: center; */
     gap: 150px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 20px 30px;
 }
 
@@ -1341,10 +1343,103 @@ header {
 
 
 /* Responsiveness */
-@media (max-width: 900px){
+@media (max-width: 700px){
 
   .menu-toggle {
     display: block;
+  }
+
+
+    footer .footer-links {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+  }
+
+  .header-top {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3px 10px;
+  }
+
+  .header-top ul {
+    padding: 3px;
+  }
+
+  .section1 {
+    flex-wrap: wrap;
+  }
+
+  .section2 .section2-content1 {
+    justify-content: center;
+  }
+
+  .section2-header {
+    padding: 30px 20px;
+  }
+
+  .section2 .section2-content1 {
+    gap: 20px;
+  }
+
+  .section2 .section2-content .card {
+    max-width: 300px;
+  }
+
+  .section4 .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 1fr); */
+  }
+
+  .section4 .container div {
+    max-width: 170px;
+    height: 150px;
+  }
+
+  .section3 {
+    flex-wrap: wrap;
+  }
+
+  .section3 .right .up {
+    flex-wrap: wrap;
+  }
+
+
+  .section2 .section2-content1 ul {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    max-width: 150px;
+  }
+
+
+  .section5 p {
+    text-align: center;
+  }
+
+  .section5 .container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section5 .container div {
+    max-width: 250px;
+  }
+
+  .section5 p a {
+    justify-content: center;
+  }
+
+  .section6 {
+    padding: 40px 20px;
+  }
+  
+  .both{
+        padding: 40px 20px;
   }
 
   nav {
