@@ -566,7 +566,7 @@ header {
     min-height: 100vh;
     background-color: rgb(245, 245, 245);
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     gap: 30px;
       padding: 50px 20px;
       align-items: center;
