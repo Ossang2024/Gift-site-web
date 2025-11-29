@@ -69,22 +69,52 @@
                 </ul>
             </div>
 
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-            <nav id="mobile-menu">
+            <div class="menu-icon" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- MENU MOBILE SLIDE-IN -->
+            <div class="mobile-menu" id="mobileMenu">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="../views/actualites.html">Actualités</a></li>  
-                    <li class="accordion-item">
-                        <div class="accordion-header">Tout savoir sur ATL <i class="fas fa-chevron-down"></i></div>
-                        <ul class="submenu">
-                            <li><a href="#">À propos</a></li>
-                            <li><a href="#">Vos besoins</a></li>
-                            <li><a href="solutions.html">Nos solutions</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+
+                    <!-- Nos services -->
+                    <li class="accordion">
+                        <div class="acc-btn">Nos Formations</div>
+                    <ul class="acc-panel">
+
+                        <!-- Formation -->
+                        <li class="accordion">
+                            <div class="acc-btn">Formations</div>
+                            <ul class="acc-panel">
+                                <li><a href="Programmation.html">Développement Web & Mobile</a></li>
+                                <li><a href="infographie.html">Infographie</a></li>
+                                <li><a href="bureautique.html">Bureautique</a></li>
+                                <li><a href="montage_vidéo.html">Montage vidéo</a></li>
+                                <li><a href="#">Data Analyse</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+
+                    <!-- Langues & Voyages -->
+                    <li class="accordion">
+                        <div class="acc-btn">Langues & Voyages</div>
+                        <ul class="acc-panel">
+                            <li><a href="allemand.html">Allemand</a></li>
+                            <li><a href="italiens.html">Italien</a></li>
+                            <li><a href="anglais.html">Anglais</a></li>
                         </ul>
                     </li>
+                    <!-- Nos créations -->
+                    <li class="norm"><a href="#">Nos créations</a></li>
+                    <li class="norm"><a href="projets.html" >Projets</a></li>
+                    <li class="norm"><a href="propos.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 

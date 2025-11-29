@@ -713,99 +713,180 @@ header {
 
 
 
-
-
-/* Classe appliquée quand on cache le header */
-.hide {
-    transition: ease-in-out 0.5s;
-    transform: translateY(-100%);
-}
-
-
-/* Icône burger */
-.menu-toggle {
-  font-size: 25px;
-  cursor: pointer;
-  display: none;
-  color: rgb(38,113,118);
-}
-
-/* Menu mobile */
-#mobile-menu {
-  position: absolute;
-  z-index: 10000;
-  top: 100%;
-  left: 0;
+/* ---------- HEADER ---------- */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #111;
+  color: #fff;
+  position: fixed;
   width: 100%;
-  background-color: rgb(38,113,118);
-  max-height: 0;
+  z-index: 1000;
   overflow: hidden;
-  transition: max-height 0.5s ease;
 }
 
-#mobile-menu ul {
-  list-style: none;
+
+/* ---------- MENU ICON ---------- */
+.menu-icon {
+  width: 35px;
+  cursor: pointer;
+  position: relative;
+  display: none;
 }
 
-#mobile-menu li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.563);
-}
-
-#mobile-menu a, .accordion-header {
+.menu-icon span {
   display: block;
-  padding: 15px 20px;
+  width: 100%;
+  height: 3px;
+  margin: 6px 10px;
+  background: rgb(38,113,118);
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Icon animation (hamburger -> cross) */
+.menu-icon.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ---------- MENU SLIDE-IN ---------- */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: rgb(28, 80, 83);
+  color: #fff;
+  padding: 40px 20px;
+  transition: 0.4s ease;
+  z-index: 900;
+  overflow-y: auto;
+  transition: ease-in-out 0.3s;
+  display: none;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu a {
   color: white;
   text-decoration: none;
   transition: ease-in-out 0.3s;
 }
-#mobile-menu a:hover {
-    background-color: rgb(38,113,118);
+
+.mobile-menu a:hover {
+  color: #b6b4b4;
 }
 
-.accordion-header {
+/* ---------- ACCORDION ---------- */
+.accordion .acc-btn {
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
+  position: relative;
 }
 
-.submenu {
+.accordion .acc-btn::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  transition: 0.3s ease;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.accordion.open .acc-btn::after {
+  transform: rotate(45deg);
+}
+
+.acc-panel {
   max-height: 0;
   overflow: hidden;
-  background-color: rgb(38,113,118);
-  transition: max-height 0.3s ease;
+  transition: max-height 0.35s ease;
+  padding-left: 15px;
 }
 
-.submenu li a {
-  padding-left: 50px;
-  text-align: center;
+.acc-panel li {
+  padding: 8px 0;
 }
 
-/* Menu actif */
-#mobile-menu.active {
-  max-height: 500px; /* Assez grand pour tout afficher */
+.acc-panel a {
+  font-size: 16px;
+  opacity: 0.85;
 }
 
-/* Accordion actif */
-.accordion-item.active .submenu {
-  max-height: 300px;
+/* Smooth slide effect */
+.accordion.open .acc-panel {
+  max-height: 500px;
 }
-@media (min-width: 900px){
-  #mobile-menu {
-    display: none !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-  }
+
+.mobile-menu .norm {
+  font-size: 15px;
+  padding: 6px 0px;
 }
 
 
 /* Responsiveness */
 @media (max-width: 900px){
 
-  .menu-toggle {
+    .header-bottom .nav {
+    display: none;
+  }
+
+  .header-bottom {
+    padding: 4px 20px;
+  }
+
+
+  .header-bottom .nav {
+    display: none;
+  }
+
+  .menu-icon {
     display: block;
   }
 
-  nav {
+  .mobile-menu {
     display: block;
   }
+
+    .header-top {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3px 10px;
+  }
+
+  .header-top ul {
+    padding: 3px;
+  }
+
+    footer .footer-links {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+  }
+
+  .section1 .flou {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+
   /* responsive du footer */
   .site-footer{ padding: 40px 24px; }
   .footer-top{ flex-direction: column; align-items: flex-start; }

@@ -266,24 +266,23 @@ function changeOption(option) {
 
 
 
-  // Affichage du menu mobile
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+// === MENU OPEN/CLOSE ===
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  mobileMenu.classList.toggle("open");
+});
+
+// === ACCORDION ===
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(acc => {
+  acc.querySelector(".acc-btn").addEventListener("click", () => {
+    acc.classList.toggle("open");
   });
-
-  // Accordéon
-  const accordionItems = document.querySelectorAll(".accordion-item");
-
-  accordionItems.forEach(item => {
-    const header = item.querySelector(".accordion-header");
-    header.addEventListener("click", () => {
-      item.classList.toggle("active");
-    });
-  });
-
+});
 
 
 
