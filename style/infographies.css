@@ -18,6 +18,10 @@ header {
     transition: ease-in-out 0.5s;
 }
 
+header.hide {
+    transform: translateY(-100%);
+}
+
 .header-top {
     padding: 5px 70px;
     color: white;
@@ -1100,7 +1104,7 @@ header {
 .footer-newsletter h3{ color: var(--primary); margin-bottom: 8px; }
 .footer-newsletter .small{ color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
 
-.newsletter-form .inputs{ display:flex; gap:8px; margin-bottom:12px; }
+.newsletter-form .inputs{ display:flex; flex-wrap: wrap; gap:8px; margin-bottom:12px; }
 .newsletter-form input{
   flex:1;
   padding: 10px 12px;
@@ -1172,18 +1176,6 @@ header {
 
 
 /* ---------- HEADER ---------- */
-.mobile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: #111;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  overflow: hidden;
-}
 
 
 /* ---------- MENU ICON ---------- */
@@ -1324,6 +1316,16 @@ header {
     display: block;
   }
 
+    .chat-float {
+    bottom: 90px;
+    right: 50px;
+  }
+
+  .float-btn{
+    bottom: 30px;
+  }
+
+
   
 
   
@@ -1364,7 +1366,7 @@ header {
   }
 
   .section3 .right img {
-    max-width: 350px;
+    max-width: 300px;
   }
 
       .section4 .container {
@@ -1381,8 +1383,10 @@ header {
   }
 
   .section4 .container div {
-    max-width: 160px;
+    max-width: 150px;
     height: 150px;
+    padding: 10px 5px;
+
   }
 
 

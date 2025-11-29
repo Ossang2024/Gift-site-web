@@ -18,6 +18,10 @@ header {
     transition: ease-in-out 0.5s;
 }
 
+header.hide {
+    transform: translateY(-100%);
+}
+
 .header-top {
     padding: 5px 70px;
     color: white;
@@ -282,10 +286,9 @@ header {
     position: absolute;
     margin: 0 auto;
     width: 100%;
-    padding-left: 50px;
-    padding-top: 230px;
-    max-width: 650px;
-    padding-bottom: 20px;
+    bottom: 50px;
+    left: 20px;
+
 }
 
 .slider-wrapper .slide-content h2 {
@@ -1144,7 +1147,7 @@ header {
 .footer-newsletter h3{ color: var(--primary); margin-bottom: 8px; }
 .footer-newsletter .small{ color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
 
-.newsletter-form .inputs{ display:flex; gap:8px; margin-bottom:12px; }
+.newsletter-form .inputs{ display:flex; flex-wrap: wrap; gap:8px; margin-bottom:12px; }
 .newsletter-form input{
   flex:1;
   padding: 10px 12px;
@@ -1411,7 +1414,7 @@ header {
   }
 
   .section3 .right img {
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .section3 .right div {
@@ -1432,10 +1435,23 @@ header {
     padding: 30px 10px;
   }
 
-  .section4 .container div {
-    max-width: 160px;
+    .section4 .container div {
+    max-width: 150px;
     height: 150px;
+    padding: 10px 5px;
+
   }
+
+  
+  .chat-float {
+    bottom: 90px;
+    right: 50px;
+  }
+
+  .float-btn{
+    bottom: 30px;
+  }
+
 
 
   nav {
