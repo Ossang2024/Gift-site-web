@@ -23,7 +23,9 @@
           "scrollbar-width",
           "scrollbar-width: none",
           "text-wrap",
-          "text-wrap: nowrap"
+          "text-wrap: nowrap",
+          "scrollbar-color",
+          "scrollbar-width: thin"
         ]
       }
     ],

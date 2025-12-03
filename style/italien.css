@@ -4,7 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;    font-family: "Open Sans", sans-serif;    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(38,113,118,0.8) rgba(200,200,200,0.3);
+    scroll-behavior: smooth;
 }
 
 header {
@@ -1191,7 +1194,7 @@ header.hide {
 .footer-newsletter h3{ color: var(--primary); margin-bottom: 8px; }
 .footer-newsletter .small{ color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
 
-.newsletter-form .inputs{ display:flex; flex-wrap: wrap; gap:8px; margin-bottom:12px; }
+.newsletter-form .inputs{ display:flex; gap:8px; margin-bottom:12px; }
 .newsletter-form input{
   flex:1;
   padding: 10px 12px;
@@ -1533,6 +1536,10 @@ header.hide {
 
   .float-btn{
     bottom: 50px;
+  }
+
+  .newsletter-form .inputs {
+    flex-wrap: wrap;
   }
 
 

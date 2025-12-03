@@ -1,8 +1,12 @@
 // code du header qui disparait progréssivement avec le scrool 
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
+const mobileMenu = document.getElementById('mobileMenu');
 
 window.addEventListener('scroll', () => {
+  // Si le menu mobile est ouvert, ne pas transformer le header
+  if (mobileMenu && mobileMenu.classList.contains('open')) return;
+
   if (window.scrollY > lastScrollY) {
     // On scroll vers le bas → cacher le header
     header.classList.add('hide');
@@ -268,11 +272,43 @@ function changeOption(option) {
 
 // === MENU OPEN/CLOSE ===
 const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
 
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   mobileMenu.classList.toggle("open");
+});
+
+// Fermer le menu mobile si l'utilisateur clique en dehors
+function closeMobileMenu() {
+  if (!menuBtn || !mobileMenu) return;
+  menuBtn.classList.remove('active');
+  mobileMenu.classList.remove('open');
+}
+
+document.addEventListener('click', (e) => {
+  if (!mobileMenu || !menuBtn) return;
+  if (!mobileMenu.classList.contains('open')) return;
+  const target = e.target;
+  // Ne rien faire si le clic est sur le bouton du menu ou à l'intérieur du menu
+  if (menuBtn.contains(target) || mobileMenu.contains(target)) return;
+  closeMobileMenu();
+});
+
+// Sur les appareils tactiles, capter touchstart pour réactivité
+document.addEventListener('touchstart', (e) => {
+  if (!mobileMenu || !menuBtn) return;
+  if (!mobileMenu.classList.contains('open')) return;
+  const target = e.target;
+  if (menuBtn.contains(target) || mobileMenu.contains(target)) return;
+  closeMobileMenu();
+}, { passive: true });
+
+// Fermer le menu avec la touche Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' || e.key === 'Esc') {
+    if (!mobileMenu || !menuBtn) return;
+    if (mobileMenu.classList.contains('open')) closeMobileMenu();
+  }
 });
 
 // === ACCORDION ===
