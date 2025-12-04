@@ -202,7 +202,7 @@ function changeOption(option) {
   function appendMessage(text, cls='bot-message') {
     const el = document.createElement('div');
     el.className = cls;
-    el.textContent = text;
+    el.innerHTML = text;  // Utilise innerHTML pour permettre les liens HTML
     body.appendChild(el);
     body.scrollTop = body.scrollHeight;
   }
@@ -219,26 +219,60 @@ function changeOption(option) {
     body.appendChild(typing);
     body.scrollTop = body.scrollHeight;
 
-    fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userText })
-    })
-    .then(async (r) => {
-      const json = await r.json();
-      body.removeChild(typing);
-      if (r.ok && json && json.reply) {
-        appendMessage(json.reply, 'bot-message');
-      } else {
-        appendMessage(json.error || "Désolé, je n'ai pas de réponse pour le moment.", 'bot-message');
+    // Réponses locales sans IA : dataset + matching simple
+    const faq = [
+      { patterns: ['bonjour','salut','bonsoir','hello'], reply: "Bonjour 👋 — Je suis l'assistant Gift Center. Vous peux vous donner des informations concernant nos formations, cours, contact, horaires ou encores langues & voyaages." },
+      { patterns: ['formation','formations','cours','Design','infographie','Montage vidéo', 'bureautique', 'sécrétariat'], reply: "Nous proposons des formations en  <a href='../views/programmation.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' >Développement Web & Mobile</a>, <a href='../views/infographie.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' > Infographie & Design</a>, <a href='../views/bureautique.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' >Sécrétariat Bureautique</a> et en <a href='../views/montage_vidéo.html' target='_blank' style='color:blue;text-decoration:none' >Montage vidéo</a>. " },
+      { patterns: ['langue','langues','anglais','allemand','italien','italiens'], reply: "Langues & Voyage : nous enseignons l'anglais, l'allemand et l'italien. Plus d'infos, visitez nos pages <a href='../views/allemand.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' >d'allemand</a>, <a href='../views/anglais.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' >d'anglais</a> ou <a href='../views/italiens.html' target='_blank' style='color:blue;font-weight: bold;text-decoration:none' >d'italiens</a>" },
+      { patterns: ['création','creation','site','site web','web'], reply: "Création digitale : développement de sites web et applications. Voir : views/création.html" },
+      { patterns: ['projet','projets','portfolio'], reply: "Nos projets sont listés <a href='../views/projets.html' target='_blank' style='color:blue; font-weight: bold;text-decoration:none' >ici</a> : — vous y trouverez des exemples et des démos." },
+      { patterns: ['contact','adresse','où','ou','ou se','douala','cameroun'], reply: "Nous sommes à Ange Raphael, Douala, Cameroun. WhatsApp : +237 6 95 20 03 78 — Email : giftcenter237@gmail.com" },
+      { patterns: ['horaire','heures','heure','jours','ouvert','fermeture'], reply: "Horaires : contactez-nous via WhatsApp pour les horaires exacts ou envoyez un e-mail à giftcenter237@gmail.com." },
+      { patterns: ['newsletter','inscrire','inscription','comment'], reply: "Pour vous inscrire à la newsletter, utilisez le <a href='#news' target='_blank' style='color:blue;text-decoration:none' >formulire</a> en bas de la page (footer)." },
+      { patterns: ['merci','thanks','thank'], reply: "Avec plaisir ! Si vous avez d'autres questions, demandez :)" },
+      { patterns: ['qui êtes vous','c est quoi','présentation','the net','ton rôle','vous faites quoi'],reply: "Nous sommes The Net, un centre de formation en programmation, cybersécurité, bureautique, langues et création de sites web. Nous aidons les étudiants à développer leurs compétences et à atteindre leurs objectifs."},
+      { patterns: ['programmation','coder','coding','python','php','html','css','javascript','formation dev'],reply: "Formation Programmation : nous proposons des cours en Python, PHP, HTML/CSS, JavaScript, et développement web complet. Plus de détails disponibles dans la section formations."},
+      { patterns: ['cybersécurité','cybersecurité','sécurité informatique','hacker','ethical hacking'],reply: "Cybersécurité : nos formations couvrent les bases de la sécurité informatique, la protection des données, et les techniques d'ethical hacking pour sécuriser les systèmes."},
+      { patterns: ['bureautique','excel','word','powerpoint','office','microsoft office'], reply: "Bureautique : nous formons à Word, Excel et PowerPoint du niveau débutant au niveau avancé. Formation idéale pour étudiants, enseignants et professionnels."}
+    ];
+
+    function normalize(s){
+      return (s||'').toLowerCase().replace(/[.,!?;:\/\\]/g,'').trim();
+    }
+
+    function findBestReply(text){
+      const t = normalize(text);
+      // exact keywords
+      let best = null;
+      let bestScore = 0;
+      faq.forEach(item => {
+        let score = 0;
+        item.patterns.forEach(p => { if (t.includes(p)) score++; });
+        if (score > bestScore) { bestScore = score; best = item; }
+      });
+      if (bestScore > 0) return best.reply;
+
+      // détecter demande de contact humain
+      if (/humain|personne|conseiller|parler|téléphone|appel/.test(t)) {
+        return "Vous voulez parler à un conseiller ? Contactez-nous sur WhatsApp : +237 6 95 20 03 78 — ou envoyez un e-mail à giftcenter237@gmail.com.";
       }
-      body.scrollTop = body.scrollHeight;
-    })
-    .catch(err => {
+
+      // détecter question sur prix
+      if (/prix|coût|tarif|combien/.test(t)) {
+        return "Les tarifs varient selon la formation; contactez-nous sur WhatsApp pour un devis rapide : +237 6 95 20 03 78.";
+      }
+
+      // fallback : proposer options rapides
+      return "Désolé, je ne suis pas sûr de comprendre. Vous pouvez demander : 'formations', 'langues', 'contact' — ou écrire 'conseiller' pour parler à un humain.";
+    }
+
+    // Simuler délai de réflexion/typing
+    setTimeout(() => {
       if (body.contains(typing)) body.removeChild(typing);
-      appendMessage("Erreur de connexion au serveur.", 'bot-message');
-      console.error(err);
-    });
+      const reply = findBestReply(userText);
+      appendMessage(reply, 'bot-message');
+      body.scrollTop = body.scrollHeight;
+    }, 700 + Math.min(1200, userText.length * 30));
   }
 
 
@@ -265,6 +299,16 @@ function changeOption(option) {
   });
 
 })();
+
+
+
+
+
+
+
+
+
+
 
 
 
