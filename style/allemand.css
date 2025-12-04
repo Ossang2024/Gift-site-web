@@ -121,7 +121,7 @@ header.hide {
 .header-bottom .nav li ul {
     background-color: rgba(38, 113, 118, 0.744);
     padding: 10px 0px;
-    border-left: solid 4px rgb(28, 80, 83) ;
+    border-left: solid 4px rgb(29, 83, 86);
     display: flex;
     justify-content: center;
     align-items: center;
