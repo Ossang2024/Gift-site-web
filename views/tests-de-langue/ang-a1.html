@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test d'anglais A1 — IELTS</title>
+
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    :root{
+      --bg: #ffffff;
+      --card: #fff;
+      --text: #111;
+      --accent: #c8102e; /* canada red default */
+      --accent-2: #ffffff;
+      --muted: #666;
+      --correct: #0a7a07;
+      --wrong: #c82020;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --max-width: 980px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* UK theme uses blue */
+    .theme-uk {
+      --accent: #012169; /* union jack navy */
+      --accent-2: #c8102e; /* red */
+      --bg: #f6f8fb;
+      --card: #ffffff;
+    }
+
+    .theme-canada {
+      --accent: #c8102e;
+      --accent-2: #ffffff;
+      --bg: #fff;
+      --card: #ffffff;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg, var(--bg), #f9fafb);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 28px auto;
+      padding: 20px;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .logo {
+      width:62px;
+      height:62px;
+      border-radius:8px;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:20px;
+    }
+
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+    p.lead{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .controls{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .btn{
+      background:var(--accent);
+      color:#fff;
+      border:none;
+      padding:10px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .btn.ghost{
+      background:transparent;
+      border:1px solid rgba(0,0,0,0.06);
+      color:var(--text);
+      font-weight:600;
+    }
+    .theme-switch{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      background:var(--card);
+      padding:6px;
+      border-radius:10px;
+      box-shadow: var(--shadow);
+    }
+    .theme-switch button{
+      padding:8px 10px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      background:transparent;
+      color:var(--text);
+      font-weight:600;
+    }
+    main{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:18px;
+    }
+
+    /* Questions column */
+    .quiz-card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow: var(--shadow);
+    }
+    .question{
+      padding:12px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.04);
+      margin-bottom:12px;
+    }
+    .question h3{
+      margin:0 0 8px 0;
+      font-size:15px;
+    }
+    .options{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    label.option{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px;
+      border-radius:8px;
+      cursor:pointer;
+      border:1px solid rgba(0,0,0,0.04);
+      user-select:none;
+    }
+    label.option input[type="radio"],
+    label.option input[type="checkbox"]{
+      transform:scale(1.1);
+    }
+    input[type="text"], input[type="number"]{
+      padding:10px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.08);
+      width:100%;
+      box-sizing:border-box;
+    }
+
+    aside.results{
+      position:sticky;
+      top:20px;
+      height:fit-content;
+    }
+    .summary{
+      background:var(--card);
+      padding:14px;
+      border-radius:12px;
+      box-shadow: var(--shadow);
+    }
+    .summary h2{
+      margin:0 0 8px 0;
+      font-size:16px;
+    }
+    .summary p{
+      margin:6px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .progress{
+      height:12px;
+      background:linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+      border-radius:8px;
+      overflow:hidden;
+    }
+    .progress > i{
+      display:block;
+      height:100%;
+      background:linear-gradient(90deg, var(--accent), var(--accent-2));
+      width:0%;
+    }
+    .final-result{
+      margin-top:12px;
+      display:none;
+      padding:12px;
+      border-radius:8px;
+    }
+    .final-result.show{ display:block; }
+
+    .per-question-correction{
+      margin-top:12px;
+      display:none;
+    }
+    .correction-item{
+      padding:10px;
+      border-radius:8px;
+      border-left:6px solid rgba(0,0,0,0.04);
+      margin-bottom:8px;
+      background:#fff;
+    }
+
+    .correct-badge{
+      color:var(--correct);
+      font-weight:700;
+    }
+    .wrong-badge{
+      color:var(--wrong);
+      font-weight:700;
+    }
+
+    footer{
+      margin-top:22px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      main{ grid-template-columns: 1fr; }
+      aside.results{ position:static; }
+    }
+
+  </style>
+</head>
+<body class="theme-canada">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">EN</div>
+        <div>
+          <h1>Test d'anglais A1 — Mini IELTS</h1>
+          <p class="lead">20+ questions simples — vocabulaire, grammaire, compréhension. Correction et score immédiats.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="theme-switch" title="Choisissez un thème de couleurs (Canada / UK)">
+          <button id="btn-canada" class="active">Canada</button>
+          <button id="btn-uk">R.-Uni</button>
+        </div>
+        <button id="btn-reset" class="btn ghost">Réinitialiser</button>
+        <button id="btn-submit" class="btn">Terminer</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="quiz-card" id="quiz">
+        <!-- Questions injected by JS -->
+      </section>
+
+      <aside class="results">
+        <div class="summary">
+          <h2>Progression</h2>
+          <p id="q-count">0 / 0 questions répondues</p>
+          <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
+          <div class="final-result" id="final-result">
+            <h3 id="score-title"></h3>
+            <p id="score-text"></p>
+          </div>
+
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button id="show-corrections" class="btn ghost" style="flex:1;">Voir les corrections</button>
+            <button id="download-report" class="btn" style="flex:1;">Télécharger le rapport</button>
+          </div>
+
+          <p style="margin-top:10px; font-size:13px; color:var(--muted)">Conseil : lis chaque explication pour comprendre pourquoi une réponse est correcte.</p>
+        </div>
+
+        <div class="per-question-correction" id="corrections-panel"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Ce test est un outil d'entraînement de niveau A1. Il ne remplace pas un examen officiel IELTS.</small>
+    </footer>
+  </div>
+
+  <script>
+    /******************************
+     * Données du test (20+ questions)
+     * Chaque question :
+     *  - id, type: "mcq"|"text", question, options (if mcq), answer, explanation
+     ******************************/
+    const QUESTIONS = [
+      {
+        id: 1, type: "mcq",
+        question: "What is the correct form? 'She ___ a teacher.'",
+        options: ["am", "is", "are", "be"],
+        answer: "is",
+        explanation: "Pour le présent simple avec 'she', on utilise 'is'."
+      },
+      {
+        id: 2, type: "mcq",
+        question: "Choose the correct article: 'I have ___ apple.'",
+        options: ["a", "an", "the", "no article"],
+        answer: "an",
+        explanation: "'Apple' commence par une voyelle, on utilise 'an'."
+      },
+      {
+        id: 3, type: "mcq",
+        question: "Which word is a color?",
+        options: ["Run", "Blue", "Eat", "Write"],
+        answer: "Blue",
+        explanation: "Blue est une couleur."
+      },
+      {
+        id: 4, type: "text",
+        question: "Write the plural of 'child'.",
+        answer: ["children"],
+        explanation: "Le pluriel irrégulier de child est children."
+      },
+      {
+        id: 5, type: "mcq",
+        question: "Choose the correct preposition: 'I live ___ London.'",
+        options: ["in", "on", "at", "to"],
+        answer: "in",
+        explanation: "On dit 'in London'."
+      },
+      {
+        id: 6, type: "mcq",
+        question: "What is the opposite of 'hot'?",
+        options: ["cold", "warm", "big", "young"],
+        answer: "cold",
+        explanation: "Opposé de hot (chaud) est cold (froid)."
+      },
+      {
+        id: 7, type: "mcq",
+        question: "Finish the question: '___ you like coffee?'",
+        options: ["Do", "Does", "Is", "Are"],
+        answer: "Do",
+        explanation: "Avec 'you' pour le présent simple on utilise 'Do you...?'"
+      },
+      {
+        id: 8, type: "text",
+        question: "Spell the number: 7 (one word).",
+        answer: ["seven"],
+        explanation: "7 s'écrit 'seven' en anglais."
+      },
+      {
+        id: 9, type: "mcq",
+        question: "Choose the correct form: 'They ___ playing now.'",
+        options: ["is", "are", "am", "be"],
+        answer: "are",
+        explanation: "They (ils/elles) prennent 'are' pour le présent progressif."
+      },
+      {
+        id: 10, type: "mcq",
+        question: "Which is correct: 'I have breakfast ___ 8 a.m.'",
+        options: ["at", "in", "on", "by"],
+        answer: "at",
+        explanation: "Heure précise -> 'at 8 a.m.'"
+      },
+      {
+        id: 11, type: "mcq",
+        question: "Select the pronoun: '___ am happy.'",
+        options: ["He", "She", "I", "They"],
+        answer: "I",
+        explanation: "'I am happy' utilise le pronom sujet 'I'."
+      },
+      {
+        id: 12, type: "mcq",
+        question: "Complete: 'There ___ two cats under the table.'",
+        options: ["is", "are", "has", "have"],
+        answer: "are",
+        explanation: "Deux (pluriel) nécessite 'There are...'."
+      },
+      {
+        id: 13, type: "text",
+        question: "Translate to English: 'Bonjour' (one word).",
+        answer: ["hello","hi"],
+        explanation: "'Bonjour' peut se traduire par 'hello' ou 'hi'."
+      },
+      {
+        id: 14, type: "mcq",
+        question: "Choose the correct time expression: 'I work ___ Monday to Friday.'",
+        options: ["from", "on", "at", "in"],
+        answer: "from",
+        explanation: "On dit 'from Monday to Friday'."
+      },
+      {
+        id: 15, type: "mcq",
+        question: "Which is a fruit?",
+        options: ["Potato", "Car", "Apple", "Bread"],
+        answer: "Apple",
+        explanation: "Apple est un fruit."
+      },
+      {
+        id: 16, type: "mcq",
+        question: "Choose the correct past form: 'Yesterday I ___ a book.'",
+        options: ["read (pronounced red)", "read (pronounced reed)", "reads", "riden"],
+        answer: "read (pronounced red)",
+        explanation: "Le verbe 'read' au passé s'écrit 'read' mais se prononce 'red'."
+      },
+      {
+        id: 17, type: "mcq",
+        question: "Select the correct question word: '___ is your name?'",
+        options: ["Where", "What", "Who", "How"],
+        answer: "What",
+        explanation: "On demande 'What is your name?'."
+      },
+      {
+        id: 18, type: "text",
+        question: "Complete the sentence: 'My name ___ John.' (fill one verb)",
+        answer: ["is"],
+        explanation: "On utilise 'is' : 'My name is John.'"
+      },
+      {
+        id: 19, type: "mcq",
+        question: "Choose the correct word for permission: '___ I come in?'",
+        options: ["May", "Must", "Should", "Will"],
+        answer: "May",
+        explanation: "Pour demander la permission poliment : 'May I come in?'"
+      },
+      {
+        id: 20, type: "mcq",
+        question: "Which sentence is correct?",
+        options: ["She can to swim.", "She can swim.", "She could swim to.", "Can she to swim?"],
+        answer: "She can swim.",
+        explanation: "Après 'can' on utilise le verbe à l'infinitif sans 'to'."
+      },
+      {
+        id: 21, type: "text",
+        question: "Fill in: 'I ___ 25 years old.' (am/is/are)",
+        answer: ["am"],
+        explanation: "Avec I on utilise 'am'."
+      },
+      {
+        id: 22, type: "mcq",
+        question: "Which answer completes: 'I don't like ___.'",
+        options: ["to swim", "swimming", "swim", "swam"],
+        answer: "swimming",
+        explanation: "Après 'like' pour parler d'une activité on peut utiliser le gérondif 'swimming' ou 'to swim' — ici 'swimming' est la meilleure option."
+      }
+    ];
+
+    /***********************
+     * Variables d'état
+     ***********************/
+    const quizEl = document.getElementById('quiz');
+    const submitBtn = document.getElementById('btn-submit');
+    const resetBtn = document.getElementById('btn-reset');
+    const qCountEl = document.getElementById('q-count');
+    const progressBar = document.getElementById('progress-bar');
+    const finalResult = document.getElementById('final-result');
+    const scoreTitle = document.getElementById('score-title');
+    const scoreText = document.getElementById('score-text');
+    const correctionsPanel = document.getElementById('corrections-panel');
+    const showCorrectionsBtn = document.getElementById('show-corrections');
+    const downloadReportBtn = document.getElementById('download-report');
+
+    // Theme buttons
+    const btnCanada = document.getElementById('btn-canada');
+    const btnUK = document.getElementById('btn-uk');
+    const bodyEl = document.body;
+
+    /***********************
+     * Render questions
+     ***********************/
+    function createQuestionHTML(q, index){
+      const wrapper = document.createElement('div');
+      wrapper.className = 'question';
+      wrapper.id = 'q-' + q.id;
+
+      const h = document.createElement('h3');
+      h.innerHTML = `${index + 1}. ${escapeHtml(q.question)}`;
+      wrapper.appendChild(h);
+
+      const optWrap = document.createElement('div');
+      optWrap.className = 'options';
+
+      if(q.type === 'mcq'){
+        q.options.forEach((opt, i) => {
+          const label = document.createElement('label');
+          label.className = 'option';
+          label.htmlFor = `q${q.id}_opt${i}`;
+
+          const input = document.createElement('input');
+          input.type = 'radio';
+          input.name = 'q' + q.id;
+          input.id = `q${q.id}_opt${i}`;
+          input.value = opt;
+
+          label.appendChild(input);
+          const span = document.createElement('span');
+          span.textContent = opt;
+          label.appendChild(span);
+
+          optWrap.appendChild(label);
+        });
+      } else if(q.type === 'text'){
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'q' + q.id;
+        input.placeholder = 'Votre réponse...';
+        optWrap.appendChild(input);
+      }
+
+      wrapper.appendChild(optWrap);
+      return wrapper;
+    }
+
+    function renderQuiz(){
+      quizEl.innerHTML = '';
+      const title = document.createElement('div');
+      title.style.display = 'flex';
+      title.style.justifyContent = 'space-between';
+      title.style.alignItems = 'center';
+      title.style.marginBottom = '12px';
+      title.innerHTML = `<strong>Questions</strong><span style="color:var(--muted);font-size:13px">${QUESTIONS.length} questions</span>`;
+      quizEl.appendChild(title);
+
+      QUESTIONS.forEach((q, idx) => {
+        quizEl.appendChild(createQuestionHTML(q, idx));
+      });
+
+      // update counters
+      updateProgress();
+    }
+
+    /***********************
+     * Helpers
+     ***********************/
+    function escapeHtml(unsafe) {
+      return unsafe.replace(/[&<"'>]/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]; });
+    }
+
+    function getUserAnswers(){
+      const answers = {};
+      QUESTIONS.forEach(q => {
+        if(q.type === 'mcq'){
+          const sel = document.querySelector(`input[name="q${q.id}"]:checked`);
+          answers[q.id] = sel ? sel.value : null;
+        } else {
+          const input = document.querySelector(`input[name="q${q.id}"]`);
+          answers[q.id] = input ? input.value.trim() : '';
+        }
+      });
+      return answers;
+    }
+
+    function updateProgress(){
+      const answers = getUserAnswers();
+      const answeredCount = Object.values(answers).filter(v => v !== null && v !== '').length;
+      qCountEl.textContent = `${answeredCount} / ${QUESTIONS.length} questions répondues`;
+      const pct = Math.round((answeredCount / QUESTIONS.length) * 100);
+      progressBar.style.width = pct + '%';
+    }
+
+    function normalizeText(s){
+      if(!s && s !== '') return '';
+      return s.toString().trim().toLowerCase();
+    }
+
+    /***********************
+     * Evaluation
+     ***********************/
+    function evaluate(){
+      const userAnswers = getUserAnswers();
+      let correctCount = 0;
+      const details = [];
+
+      QUESTIONS.forEach(q => {
+        const user = userAnswers[q.id];
+        let isCorrect = false;
+        let correctDisplay = q.answer;
+        if(q.type === 'mcq'){
+          isCorrect = (user !== null && normalizeText(user) === normalizeText(q.answer));
+          correctDisplay = q.answer;
+        } else {
+          // text: allow multiple correct answers (array) or single string
+          const expected = Array.isArray(q.answer) ? q.answer : [q.answer];
+          const matched = expected.some(e => normalizeText(e) === normalizeText(user));
+          isCorrect = matched;
+          correctDisplay = expected.join(' / ');
+        }
+
+        if(isCorrect) correctCount++;
+
+        details.push({
+          id: q.id,
+          question: q.question,
+          user: user === null || user === '' ? '(aucune réponse)' : user,
+          correct: correctDisplay,
+          isCorrect,
+          explanation: q.explanation
+        });
+      });
+
+      return { correctCount, details, total: QUESTIONS.length };
+    }
+
+    /***********************
+     * Show results
+     ***********************/
+    function showResults(){
+      const res = evaluate();
+      const pct = Math.round((res.correctCount / res.total) * 100);
+      scoreTitle.textContent = `Score: ${res.correctCount} / ${res.total} (${pct}%)`;
+      scoreText.textContent = gradeText(pct);
+
+      finalResult.classList.add('show');
+      // show corrections panel content hidden by default
+      buildCorrections(res.details);
+      // disable inputs to prevent changes after submission
+      disableInputs(true);
+      // scroll to results
+      finalResult.scrollIntoView({behavior:'smooth', block:'center'});
+
+      // prepare downloadable report
+      downloadReportBtn.onclick = () => downloadReport(res);
+    }
+
+    function gradeText(pct){
+      // For A1 practice we give a friendly message
+      if(pct >= 90) return "Excellent — très bon niveau A1.";
+      if(pct >= 75) return "Très bien — bon niveau A1.";
+      if(pct >= 50) return "Correct — vous êtes dans la zone A1, continuez à pratiquer.";
+      return "Besoin de pratique — révisez le vocabulaire et la grammaire de base.";
+    }
+
+    function buildCorrections(details){
+      correctionsPanel.innerHTML = '';
+      correctionsPanel.style.display = 'block';
+      details.forEach(d => {
+        const it = document.createElement('div');
+        it.className = 'correction-item';
+        const status = d.isCorrect ? `<span class="correct-badge">Correct</span>` : `<span class="wrong-badge">Incorrect</span>`;
+        it.innerHTML = `<strong>Q${d.id}.</strong> ${escapeHtml(d.question)}<br/>
+                        Réponse de l'utilisateur: <strong>${escapeHtml(d.user)}</strong><br/>
+                        Bonne réponse: <strong>${escapeHtml(d.correct)}</strong><br/>
+                        ${status} — <em style="color:var(--muted);">${escapeHtml(d.explanation)}</em>`;
+        correctionsPanel.appendChild(it);
+      });
+      // show-corrections button toggles visibility
+      showCorrectionsBtn.onclick = () => {
+        correctionsPanel.style.display = correctionsPanel.style.display === 'none' ? 'block' : 'none';
+        correctionsPanel.scrollIntoView({behavior:'smooth', block:'center'});
+      };
+    }
+
+    function disableInputs(disable){
+      const inputs = quizEl.querySelectorAll('input');
+      inputs.forEach(i => i.disabled = disable);
+      submitBtn.disabled = disable;
+    }
+
+    /***********************
+     * Download report (simple text)
+     ***********************/
+    function downloadReport(result){
+      const lines = [];
+      lines.push("Test A1 — Mini IELTS (rapport)");
+      lines.push("Date: " + new Date().toLocaleString());
+      lines.push(`Score: ${result.correctCount}/${result.total} (${Math.round((result.correctCount/result.total)*100)}%)`);
+      lines.push("");
+      result.details.forEach(d => {
+        lines.push(`Q${d.id}. ${d.question}`);
+        lines.push(`  Votre réponse: ${d.user}`);
+        lines.push(`  Bonne réponse: ${d.correct}`);
+        lines.push(`  ${d.isCorrect ? 'Correct' : 'Incorrect'} — ${d.explanation}`);
+        lines.push('');
+      });
+      const blob = new Blob([lines.join('\\n')], {type: 'text/plain;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'rapport_test_A1.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    /***********************
+     * Events
+     ***********************/
+    // update progress when any input changes
+    document.addEventListener('input', function(e){
+      updateProgress();
+    });
+    document.addEventListener('change', function(e){
+      updateProgress();
+    });
+
+    submitBtn.addEventListener('click', function(){
+      // confirm intention quickly — but per instructions we do not ask for extra confirmation: evaluate now
+      showResults();
+    });
+
+    resetBtn.addEventListener('click', function(){
+      if(!confirm('Voulez-vous réinitialiser le test ? Toutes les réponses seront supprimées.')) return;
+      // enable inputs and clear values
+      const inputs = quizEl.querySelectorAll('input');
+      inputs.forEach(i => {
+        if(i.type === 'radio') i.checked = false;
+        else i.value = '';
+        i.disabled = false;
+      });
+      finalResult.classList.remove('show');
+      correctionsPanel.style.display = 'none';
+      submitBtn.disabled = false;
+      updateProgress();
+    });
+
+    // Theme toggles
+    btnCanada.addEventListener('click', () => {
+      bodyEl.classList.remove('theme-uk');
+      bodyEl.classList.add('theme-canada');
+      btnCanada.disabled = true;
+      btnUK.disabled = false;
+    });
+    btnUK.addEventListener('click', () => {
+      bodyEl.classList.remove('theme-canada');
+      bodyEl.classList.add('theme-uk');
+      btnUK.disabled = true;
+      btnCanada.disabled = false;
+    });
+    // default states
+    btnCanada.disabled = true;
+
+    // small enhancement: allow enter to submit if focus in last input
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' && (document.activeElement.tagName === 'INPUT')) {
+        // avoid accidental submit while typing; require ctrl+enter
+        if(e.ctrlKey) showResults();
+      }
+    });
+
+    // initial render
+    renderQuiz();
+
+    // small accessibility: show how to submit
+    const note = document.createElement('p');
+    note.style.marginTop='8px';
+    note.style.color='var(--muted)';
+    note.style.fontSize='13px';
+    note.textContent = "Astuce: utilisez le bouton 'Terminer' pour voir votre score. Ctrl+Entrée pour finir rapidement.";
+    quizEl.insertBefore(note, quizEl.children[1]);
+
+    // Accessibility: observe changes and update progress
+    const observer = new MutationObserver(updateProgress);
+    observer.observe(quizEl, {childList:true, subtree:true});
+
+    // Expose updateProgress to be called on load
+    updateProgress();
+  </script>
+</body>
+</html>

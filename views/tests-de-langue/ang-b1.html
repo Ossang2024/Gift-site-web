@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<title>English Level Test – B1 IELTS</title>
+
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    header {
+        background: linear-gradient(90deg, #d40000, #ffffff, #00247d);
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        font-size: 15px;
+    }
+
+    h2 {
+        color: #00247d;
+        font-size: 20px;
+    }
+
+    .question {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-left: 4px solid #d40000;
+        background: #fafafa;
+    }
+
+    button {
+        background: #00247d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #d40000;
+    }
+
+    #result {
+        margin-top: 30px;
+        padding: 20px;
+        background: #e8f4ff;
+        border-left: 4px solid #00247d;
+        display: none;
+    }
+
+    .correct {
+        color: green;
+        font-weight: bold;
+    }
+
+    .wrong {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>English Level Test – B1 (IELTS Style)</header>
+
+<div class="container">
+    <h2>Answer all questions</h2>
+
+    <form id="quizForm">
+        <div id="questions"></div>
+        <button type="button" onclick="checkAnswers()">Submit Test</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    const questionsB1 = [
+        {
+            q: "1. If I ____ more time, I would learn another language.",
+            options: ["have", "had", "would have"],
+            answer: "had"
+        },
+        {
+            q: "2. She suggested ____ to the cinema instead.",
+            options: ["to go", "going", "go"],
+            answer: "going"
+        },
+        {
+            q: "3. This is the place ____ we met last year.",
+            options: ["when", "where", "that"],
+            answer: "where"
+        },
+        {
+            q: "4. I’m not used ____ so early.",
+            options: ["to get up", "getting up", "get up"],
+            answer: "getting up"
+        },
+        {
+            q: "5. He apologized ____ being late.",
+            options: ["for", "to", "about"],
+            answer: "for"
+        },
+        {
+            q: "6. If it doesn’t stop raining, we ____ cancel the match.",
+            options: ["would", "will", "are"],
+            answer: "will"
+        },
+        {
+            q: "7. The film was interesting, ____ it was too long.",
+            options: ["although", "so", "because"],
+            answer: "although"
+        },
+        {
+            q: "8. She has worked here ____ five years.",
+            options: ["since", "for", "during"],
+            answer: "for"
+        },
+        {
+            q: "9. I prefer reading books ____ watching movies.",
+            options: ["than", "to", "instead"],
+            answer: "to"
+        },
+        {
+            q: "10. They were tired, ____ they continued working.",
+            options: ["but", "so", "because"],
+            answer: "but"
+        },
+        {
+            q: "11. The teacher told us ____ quietly.",
+            options: ["to work", "work", "working"],
+            answer: "to work"
+        },
+        {
+            q: "12. I wish I ____ speak Spanish fluently.",
+            options: ["can", "could", "will"],
+            answer: "could"
+        },
+        {
+            q: "13. He asked me if I ____ the report.",
+            options: ["finished", "had finished", "have finished"],
+            answer: "had finished"
+        },
+        {
+            q: "14. Do you know the woman ____ is talking to John?",
+            options: ["which", "who", "what"],
+            answer: "who"
+        },
+        {
+            q: "15. When I arrived, they ____ dinner.",
+            options: ["were having", "had", "have"],
+            answer: "were having"
+        },
+        {
+            q: "16. I’d rather ____ at home tonight.",
+            options: ["stay", "to stay", "staying"],
+            answer: "stay"
+        },
+        {
+            q: "17. She hasn’t decided ____ to accept the job offer.",
+            options: ["if", "whether", "which"],
+            answer: "whether"
+        },
+        {
+            q: "18. You shouldn’t go out ____ you feel better.",
+            options: ["until", "when", "during"],
+            answer: "until"
+        },
+        {
+            q: "19. The book was so boring that I ____ finish it.",
+            options: ["didn't", "couldn't", "wouldn't"],
+            answer: "couldn't"
+        },
+        {
+            q: "20. I'm looking forward ____ you again.",
+            options: ["to see", "seeing", "see"],
+            answer: "seeing"
+        }
+    ];
+
+    // DISPLAY QUESTIONS
+    const qContainer = document.getElementById("questions");
+    questionsB1.forEach((item, index) => {
+        let html = `
+            <div class="question">
+                <p>${item.q}</p>
+                ${item.options.map(opt => `
+                    <label>
+                        <input type="radio" name="q${index}" value="${opt}"> ${opt}
+                    </label><br>
+                `).join("")}
+            </div>
+        `;
+        qContainer.innerHTML += html;
+    });
+
+    // CHECK ANSWERS
+    function checkAnswers() {
+        let score = 0;
+        let correctionHTML = "<h2>Your Results</h2>";
+
+        questionsB1.forEach((item, index) => {
+            let selected = document.querySelector(`input[name="q${index}"]:checked`);
+
+            if (selected) {
+                if (selected.value === item.answer) {
+                    score++;
+                    correctionHTML += `<p><strong>${item.q}</strong> 
+                    ➤ <span class="correct">Correct (${item.answer})</span></p>`;
+                } else {
+                    correctionHTML += `<p><strong>${item.q}</strong> 
+                    ➤ <span class="wrong">Wrong (${selected.value})</span> |
+                    Correct answer: <span class="correct">${item.answer}</span></p>`;
+                }
+            } else {
+                correctionHTML += `<p><strong>${item.q}</strong> 
+                ➤ <span class="wrong">Not answered</span> |
+                Correct answer: <span class="correct">${item.answer}</span></p>`;
+            }
+        });
+
+        correctionHTML += `<h2>Final Score: ${score} / ${questionsB1.length}</h2>`;
+
+        const result = document.getElementById("result");
+        result.innerHTML = correctionHTML;
+        result.style.display = "block";
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>

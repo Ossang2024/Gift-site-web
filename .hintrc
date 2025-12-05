@@ -25,7 +25,8 @@
           "text-wrap",
           "text-wrap: nowrap",
           "scrollbar-color",
-          "scrollbar-width: thin"
+          "scrollbar-width: thin",
+          "user-select"
         ]
       }
     ],

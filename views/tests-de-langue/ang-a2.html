@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../../assets/logo/favicon (10).ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Level Test A2</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Estonia&family=Faculty+Glyphic&family=Gothic+A1&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+    header {
+        background: linear-gradient(90deg, #d40000, #ffffff, #00247d);
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        font-size: 15px;
+    }
+
+    h2 {
+        color: #00247d;
+        font-size: 20px;
+    }
+
+    .question {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-left: 4px solid #d40000;
+        background: #fafafa;
+    }
+
+    button {
+        background: #00247d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #d40000;
+    }
+
+    #result {
+        margin-top: 30px;
+        padding: 20px;
+        background: #e8f4ff;
+        border-left: 4px solid #00247d;
+        display: none;
+    }
+
+    .correct {
+        color: green;
+        font-weight: bold;
+    }
+
+    .wrong {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>English Level Test – A2 (IELTS Style)</header>
+
+<div class="container">
+    <h2>Answer all questions</h2>
+
+    <form id="quizForm">
+
+        <!-- QUESTIONS A2 + CORRECTIONS + CHOIX -->
+        <div id="questions"></div>
+
+        <button type="button" onclick="checkAnswers()">Submit Test</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    const questionsA2 = [
+        {
+            q: "1. I ____ to the market every Saturday.",
+            options: ["go", "goes", "going"],
+            answer: "go"
+        },
+        {
+            q: "2. She can't come because she is ____ for her exam.",
+            options: ["study", "studying", "studies"],
+            answer: "studying"
+        },
+        {
+            q: "3. We ____ in this house since 2020.",
+            options: ["live", "are living", "have lived"],
+            answer: "have lived"
+        },
+        {
+            q: "4. There aren’t ____ apples left.",
+            options: ["some", "any", "a"],
+            answer: "any"
+        },
+        {
+            q: "5. Do you know ___ to get to the station?",
+            options: ["what", "how", "where"],
+            answer: "how"
+        },
+        {
+            q: "6. I enjoy ____ tennis on weekends.",
+            options: ["play", "to play", "playing"],
+            answer: "playing"
+        },
+        {
+            q: "7. It was very cold, ____ we stayed inside.",
+            options: ["although", "so", "because"],
+            answer: "so"
+        },
+        {
+            q: "8. She is ____ than her brother.",
+            options: ["tall", "taller", "the tallest"],
+            answer: "taller"
+        },
+        {
+            q: "9. They ____ to London next week.",
+            options: ["go", "are going", "went"],
+            answer: "are going"
+        },
+        {
+            q: "10. I haven't seen him ____ Monday.",
+            options: ["since", "for", "from"],
+            answer: "since"
+        },
+        {
+            q: "11. Can you lend me ____ money?",
+            options: ["a few", "a little", "few"],
+            answer: "a little"
+        },
+        {
+            q: "12. My father ____ drive a car.",
+            options: ["can", "cans", "could"],
+            answer: "can"
+        },
+        {
+            q: "13. This is the ____ movie I’ve ever watched.",
+            options: ["more interesting", "most interesting", "interesting"],
+            answer: "most interesting"
+        },
+        {
+            q: "14. She arrived ____ time for the meeting.",
+            options: ["at", "in", "on"],
+            answer: "on"
+        },
+        {
+            q: "15. He is interested ____ learning French.",
+            options: ["at", "on", "in"],
+            answer: "in"
+        },
+        {
+            q: "16. I ____ to the gym yesterday.",
+            options: ["go", "went", "gone"],
+            answer: "went"
+        },
+        {
+            q: "17. They ____ in the garden when it started to rain.",
+            options: ["worked", "were working", "work"],
+            answer: "were working"
+        },
+        {
+            q: "18. She speaks English ____ than me.",
+            options: ["good", "better", "best"],
+            answer: "better"
+        },
+        {
+            q: "19. This laptop is ____ expensive than the other one.",
+            options: ["more", "most", "much"],
+            answer: "more"
+        },
+        {
+            q: "20. What ____ you do yesterday?",
+            options: ["did", "do", "does"],
+            answer: "did"
+        }
+    ];
+
+    // DISPLAY QUESTIONS
+    const qContainer = document.getElementById("questions");
+    questionsA2.forEach((item, index) => {
+        let html = `
+            <div class="question">
+                <p>${item.q}</p>
+                ${item.options.map(opt => `
+                    <label>
+                        <input type="radio" name="q${index}" value="${opt}"> ${opt}
+                    </label><br>
+                `).join("")}
+            </div>
+        `;
+        qContainer.innerHTML += html;
+    });
+
+    // VALIDATE TEST
+    function checkAnswers() {
+        let score = 0;
+        let correctionHTML = "<h2>Your Results</h2>";
+
+        questionsA2.forEach((item, index) => {
+            let selected = document.querySelector(`input[name="q${index}"]:checked`);
+
+            if (selected) {
+                if (selected.value === item.answer) {
+                    score++;
+                    correctionHTML += `<p><strong>${item.q}</strong> 
+                    ➤ <span class="correct">Correct (${item.answer})</span></p>`;
+                } else {
+                    correctionHTML += `<p><strong>${item.q}</strong> 
+                    ➤ <span class="wrong">Wrong (${selected.value})</span> |
+                    Correct answer: <span class="correct">${item.answer}</span></p>`;
+                }
+            } else {
+                correctionHTML += `<p><strong>${item.q}</strong> 
+                ➤ <span class="wrong">Not answered</span> |
+                Correct answer: <span class="correct">${item.answer}</span></p>`;
+            }
+        });
+
+        correctionHTML += `<h2>Final Score: ${score} / ${questionsA2.length}</h2>`;
+
+        const result = document.getElementById("result");
+        result.innerHTML = correctionHTML;
+        result.style.display = "block";
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>
