@@ -228,7 +228,7 @@ function changeOption(option) {
       { patterns: ['projet','projets','portfolio'], reply: "Nos projets sont listés <a href='../views/projets.html' target='_blank' style='color:blue; font-weight: bold;text-decoration:none' >ici</a> : — vous y trouverez des exemples et des démos." },
       { patterns: ['contact','adresse','où','ou','ou se','douala','cameroun'], reply: "Nous sommes à Ange Raphael, Douala, Cameroun. WhatsApp : +237 6 95 20 03 78 — Email : giftcenter237@gmail.com" },
       { patterns: ['horaire','heures','heure','jours','ouvert','fermeture'], reply: "Horaires : contactez-nous via WhatsApp pour les horaires exacts ou envoyez un e-mail à giftcenter237@gmail.com." },
-      { patterns: ['newsletter','inscrire','inscription','comment'], reply: "Pour vous inscrire à la newsletter, utilisez le <a href='#news' target='_blank' style='color:blue;text-decoration:none' >formulire</a> en bas de la page (footer)." },
+      { patterns: ['comment faire','inscrire','inscription','comment'], reply: "Pour vous inscrire, utilisez le formulaire dans la page de <a href='../views/contact.html' target='_blank' style='color:blue;text-decoration:none'>Contact</a> et Précisez le motif de l'inscription." },
       { patterns: ['merci','thanks','thank'], reply: "Avec plaisir ! Si vous avez d'autres questions, demandez :)" },
       { patterns: ['qui êtes vous','c est quoi','présentation','the net','ton rôle','vous faites quoi'],reply: "Nous sommes The Net, un centre de formation en programmation, cybersécurité, bureautique, langues et création de sites web. Nous aidons les étudiants à développer leurs compétences et à atteindre leurs objectifs."},
       { patterns: ['programmation','coder','coding','python','php','html','css','javascript','formation dev'],reply: "Formation Programmation : nous proposons des cours en Python, PHP, HTML/CSS, JavaScript, et développement web complet. Plus de détails disponibles dans la section formations."},
@@ -302,6 +302,23 @@ function changeOption(option) {
 
 
 
+
+
+
+
+
+
+
+
+// code poiur le les cartes de la section création digitale
+
+const cards = document.querySelectorAll(".service-card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("active");
+    });
+});
 
 
 

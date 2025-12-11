@@ -5,10 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: rgba(38,113,118,0.8) rgba(200,200,200,0.3);
-    font-family: "Open Sans", sans-serif;
+
 }
 
 header {
@@ -261,26 +261,26 @@ header.hide {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("https://i.pinimg.com/736x/95/a3/aa/95a3aaa3f11943668de4e907e4e9c19b.jpg");
+    background-image: url("https://i.pinimg.com/1200x/52/a2/99/52a2996379f04d614002c5efd87f35c1.jpg");
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(5px);
 }
 
 .slider-wrapper .slider-item:nth-child(2)::before{
-    background-image: url(https://localhost-academy.com/wp-content/uploads/2022/10/Formation-en-montage-video-au-Cameroun-1.jpg);
+    background-image: url(https://i.pinimg.com/736x/f7/64/0a/f7640adbfb5e7cc0718a85e569803e9b.jpg);
 }
 
 .slider-wrapper .slider-item:nth-child(3):before{
-    background-image: url(https://i.pinimg.com/736x/50/50/f1/5050f1871b273245ebdb13e3b87a9ba6.jpg);
+    background-image: url(https://i.pinimg.com/736x/ab/86/d7/ab86d7f3d389ed1393e42f123dc52d02.jpg);
 }
 
 .slider-wrapper .slider-item:nth-child(4):before{
-    background-image: url(https://i.pinimg.com/1200x/66/1e/84/661e8494c2a2354228cff75e68d5cfda.jpg);
+    background-image: url(https://i.pinimg.com/1200x/1b/aa/07/1baa07042c398f6d200917fab158833b.jpg);
 }
 
 .slider-wrapper .slider-item:nth-child(5):before{
-    background-image: url(https://i.pinimg.com/736x/2b/cf/9e/2bcf9e6131498e96b0509b0675901328.jpg);
+    background-image: url(https://i.pinimg.com/1200x/44/09/f3/4409f36659f44eb7bca9acc5c46ffb9e.jpg);
 }
 
 .slider-wrapper .slider-item .slide-content {
@@ -291,6 +291,7 @@ header.hide {
     width: 100%;
     bottom: 50px;
     left: 20px;
+
 }
 
 .slider-wrapper .slide-content h2 {
@@ -438,160 +439,6 @@ header.hide {
 
 
 
-
-
-
-.section22 {
-    padding: 50px 20px;
-    background-color: rgb(245, 245, 245);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-direction: column;
-}
-
-.section22 h2 {
-    font-size: 2rem;
-    color: rgb(38,113,118);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.section22 .div {
-    height: 3px;
-    width: 150px;
-    background-color: rgb(53,144,67);
-    border-radius: 50px;
-    /* margin-bottom: 40px; */
-}
-
-.section22 .text {
-    font-size: 17px;
-    color: #555;
-    line-height: 2.0;
-    text-align: center;
-    padding: 0px 80px;
-}
-
-
-.section22 .cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    /* flex-wrap: wrap; */
-}
-
-
-.section22 .card {
-    background-color: rgb(248, 246, 246);
-    padding: 10px 5px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 220px;
-    min-height: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.section22 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-
-.section22 .card h3 {
-    font-size: 1.2rem;
-    color: rgb(38,113,118);
-    margin-bottom: 10px;
-}
-
-.section22 .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    background-color: rgb(38,113,118);
-    color: white;
-}
-
-.section22 .card:hover p {
-    transform: scale(1.8);
-}
-
-.section22 .card:hover ul {
-    color: white;
-}
-
-.section22 .card:hover h3 {
-    color: white;
-}
-
-.section22 .card:hover a {
-    background-color: white;
-    color: rgb(38,113,118);
-}
-
-
-
-.section22 .card h3 {
-    font-size: 1.5rem;
-    color: rgb(38,113,118);
-    margin-bottom: 10px;
-    transition: ease-in-out 0.3s;
-}
-
-.section22 .card ul {
-    list-style: none;
-    margin-bottom: 15px;
-    padding-left: 0px;
-    font-size: 14px;
-    color: #555;
-    transition: ease-in-out 0.3s;
-}
-
-/* .section2 .card p {
-    font-size: 20px;
-    color: rgb(53,144,67);
-    line-height: 1.5;
-    text-align: center;
-    font-weight: 600;
-    transition: ease-in-out 0.3s;
-    font-family: "Bebas Neue", sans-serif;
-} */
-
-.section22 .card a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    background-color: rgb(38,113,118);
-    font-size: 13px;
-    transition: ease-in-out 0.3s;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-.section22 .card a:hover {
-    background-color: rgb(28, 80, 83);
-    border-radius: 5px;
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section2 {
     padding: 50px 20px;
     background-color: rgb(245, 245, 245);
@@ -631,7 +478,7 @@ header.hide {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 
@@ -640,9 +487,9 @@ header.hide {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
     text-align: center;
-    max-width: 300px;
+    max-width: 220px;
+    min-height: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -660,36 +507,73 @@ header.hide {
     margin-bottom: 10px;
 }
 
-.section2 .card p {
+.section2 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    background-color: rgb(38,113,118);
+    color: white;
+}
+
+.section2 .card:hover p {
+    transform: scale(1.8);
+}
+
+.section2 .card:hover ul {
+    color: white;
+}
+
+.section2 .card:hover h3 {
+    color: white;
+}
+
+.section2 .card:hover a {
+    background-color: white;
+    color: rgb(38,113,118);
+}
+
+
+
+.section2 .card h3 {
+    font-size: 1.5rem;
+    color: rgb(38,113,118);
+    margin-bottom: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.section2 .card ul {
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 0px;
     font-size: 14px;
     color: #555;
+    transition: ease-in-out 0.3s;
+}
+
+/* .section2 .card p {
+    font-size: 20px;
+    color: rgb(53,144,67);
     line-height: 1.5;
     text-align: center;
-}
+    font-weight: 600;
+    transition: ease-in-out 0.3s;
+    font-family: "Bebas Neue", sans-serif;
+} */
 
-.section2 .card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    height: 300px;
-}
-
-.section2 p a {
+.section2 .card a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     background-color: rgb(38,113,118);
-    font-size: 15px;
+    font-size: 13px;
     transition: ease-in-out 0.3s;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 10px;
 }
 
-.section2 p a:hover {
+.section2 .card a:hover {
     background-color: rgb(28, 80, 83);
     border-radius: 5px;
-    letter-spacing: 3px;
-    font-size: 17px;
+    color: white;
 }
 
 
@@ -710,8 +594,8 @@ header.hide {
     min-height: 100vh;
     background-color: rgb(245, 245, 245);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    justify-content: space-between;
     gap: 30px;
     padding: 50px 20px;
 }
@@ -737,6 +621,7 @@ header.hide {
     background-color: rgb(53,144,67);
     border-radius: 50px;
     margin: 20px;
+    overflow: hidden;
 }
 
 .section3 .left p {
@@ -766,7 +651,7 @@ header.hide {
 
 .section3 .right {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   position: relative;
 }
@@ -803,6 +688,7 @@ header.hide {
     opacity: 0;
     transform: translateY(-90%);
     text-align: center;
+    overflow: hidden;
 }
 
 .section3 .right div:hover {
@@ -1336,6 +1222,7 @@ header.hide {
 
 
 
+
 /* ---------- HEADER ---------- */
 .mobile-header {
   display: flex;
@@ -1468,7 +1355,7 @@ header.hide {
 /* Responsiveness */
 @media (max-width: 900px){
 
-      .header-bottom .nav {
+    .header-bottom .nav {
     display: none;
   }
 
@@ -1487,8 +1374,8 @@ header.hide {
 
   .mobile-menu {
     display: block;
-  }
-
+  } 
+  
 
   footer .footer-links {
     flex-wrap: wrap;
@@ -1515,28 +1402,28 @@ header.hide {
     max-width: 350px;
   }
 
-  .section22 .text{
-    padding: 20px;
-    text-align: justify;
-  }
-
-  .section22 .cards {
-    flex-wrap: wrap;
-  }
-
-
   .section2 .text{
     padding: 20px;
     text-align: justify;
   }
 
+  .section2 .cards {
+    flex-wrap: wrap;
+  }
+
   .section3 {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .section3 .right img {
     max-width: 300px;
   }
+
+  .section3 .right div {
+    padding: 20px;
+    text-align: center;
+  } 
 
       .section4 .container {
     display: flex;
@@ -1551,7 +1438,7 @@ header.hide {
     padding: 30px 10px;
   }
 
-  .section4 .container div {
+    .section4 .container div {
     max-width: 150px;
     height: 150px;
     padding: 10px 5px;

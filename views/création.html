@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#4A9BA3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gift Center">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo/favicon (10).ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/création.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- code d'intégation et de redirection vers Emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>    
+    <title>Créations Digitales - Gift Center</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header-top">
+            <div>
+                <p><i class="fas fa-map-marker-alt"></i> Ange Raphael, Douala Cameroum </p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="mailto:giftagency237@gmail.com"><i class="fas fa-envelope" style="margin-right: 5px;"></i>giftagency237@gmail.com</a></li>
+                    <li><a href="https://wa.me/237695200378" target="_blank"><i class="fa-solid fa-phone-flip"></i> +237 6 95 20 03 78</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/FB_IMG_1749970934301.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <ul class="nav">
+                    <li><a href="../index.html" class="deco">Acceuil</a></li>
+                    <li class="services active">
+                        <a href="#">Nos services <i class="fas fa-chevron-down"></i> </a>
+                            <ul class="ul1">
+                                <li class="services1">
+                                    <a href="#">Formations</a>
+                                    <ul class="ul11">
+                                        <li><a href="Programmation.html">Développement Web & mobil</a></li>
+                                        <li><a href="infographie.html">Infographie</a></li>
+                                        <li><a href="bureautique.html">Bureautique</a></li>
+                                        <li><a href="data_analyse.html">Data Analise</a></li>
+                                        <li><a href="montage_vidéo.html">Montage vidéo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="services2">
+                                    <a href="création.html">Création digitales </a>
+                                </li>
+                                <li class="services3">
+                                    <a href="#">Langues & voyage </a>
+                                        <ul class="ul13">
+                                            <li><a href="allemand.html">Allemand</a></li>
+                                            <li><a href="italiens.html">Italiens</a></li>
+                                            <li><a href="anglais.html">Anglais</a></li>
+                                        </ul>
+                                </li>
+                            </ul>
+                    </li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="propos.html" class="deco">À propos</a></li>                   
+                    <li><a href="contact.html" class="deco">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-icon" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- MENU MOBILE SLIDE-IN -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+
+                    <!-- Nos services -->
+                    <li class="accordion">
+                        <div class="acc-btn">Nos Formations</div>
+                    <ul class="acc-panel">
+
+                        <!-- Formation -->
+                        <li class="accordion">
+                            <div class="acc-btn">Formations</div>
+                            <ul class="acc-panel">
+                                <li><a href="Programmation.html">Développement Web & Mobile</a></li>
+                                <li><a href="infographie.html">Infographie</a></li>
+                                <li><a href="bureautique.html">Bureautique</a></li>
+                                <li><a href="montage_vidéo.html">Montage vidéo</a></li>
+                                <li><a href="data_analyse.html">Data Analyse</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+
+                    <!-- Langues & Voyages -->
+                    <li class="accordion">
+                        <div class="acc-btn">Langues & Voyages</div>
+                        <ul class="acc-panel">
+                            <li><a href="allemand.html">Allemand</a></li>
+                            <li><a href="italiens.html">Italien</a></li>
+                            <li><a href="anglais.html">Anglais</a></li>
+                        </ul>
+                    </li>
+                    <!-- Nos créations -->
+                    <li class="norm"><a href="création.html">Nos créations</a></li>
+                    <li class="norm"><a href="projets.html" >Projets</a></li>
+                    <li class="norm"><a href="propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="section1">
+        <div class="left">
+            <h1><span>Solutions</span> Digitales Complètes</h1>
+            <p>Chez Gift Center, votre partenaire digital complet : sites web, applications mobiles, infographie, vidéographie et impression professionnelle</p>
+            <div class="btns">
+                <a href="#decouverte" class="btn1">Découvrire nos services</a>
+                <a href="contact.html" class="btn2">Nous contacter</a>
+            </div>
+        </div>
+        <div class="right">
+            <video src="https://cdn.pixabay.com/video/2025/10/29/312809_large.mp4" controls autoplay muted loop>
+                <source src="../assets/videos/creation.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="section2">
+        <div class="content-left">
+            <h1>A propos</h1>
+            <div></div>
+            <p>Nous concevons des <span>sites web, applications mobiles, supports visuels et vidéos</span> pensés pour raconter votre histoire et engager votre audience. De la <span>découverte stratégique</span> (cible & objectifs) au <span>prototypage, design, développement et mise en ligne,</span> nous privilégions l'expérience utilisateur et les résultats mesurables. Chaque projet suit un parcours collaboratif — <span>maquette, validation, livraison et support</span> — afin d'assurer une solution professionnelle, adaptable et prête à performer. <a href="contact.html" style="color: #267176; font-weight:600; text-decoration:none">Contactez-nous</a> pour lancer votre projet.</p>
+        </div>
+        <div class="content-right">
+            <img src="https://i.pinimg.com/736x/92/78/a0/9278a0029f283944587916a18a4de6a0.jpg" alt="Création digitale Gift Center">
+        </div>    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="section3" id="decouverte">
+        <div class="head">
+            <h1>Nos services</h1>
+            <div></div>
+            <p>Des solutions digitales sur mesure pour propulser votre présence en ligne et atteindre vos objectifs.</p>
+        </div>
+
+        <div class="cards">
+            <div class="service-card">
+                <div class="card-inner">              
+                    <!-- Face avant -->
+                    <div class="card-face card-front">
+                        <h3><i class="fa-solid fa-laptop-code"></i></h3>
+                        <h2>Développement Web & Mobile</h2>
+                        <p>Création de sites vitrines et d'applications mobiles performantes, rapides et optimisées pour le référencement et la conversion.</p>
+                        <p class="aide"></p>
+                    </div>
+
+                    <!-- Face arrière -->
+                    <div class="card-face card-back">
+                        <h2>Ce que tu obtiens</h2>
+                        <ul>
+                            <li>Sites vitrines & e-commerce</li>
+                            <li>Applications mobiles</li>
+                            <li>UI/UX professionnelle</li>
+                            <li>Optimisation SEO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-inner">              
+                    <!-- Face avant -->
+                    <div class="card-face card-front">
+                        <h3><i class="fa-solid fa-palette"></i></h3>
+                        <h2>Infographie & Design</h2>
+                        <p>Conception d'identités visuelles, supports marketing et contenus graphiques engageants pour renforcer votre image et votre communication.</p>
+                        <p class="aide"></p>
+                    </div>
+
+                    <!-- Face arrière -->
+                    <div class="card-face card-back">
+                        <h2>Ce que tu obtiens</h2>
+                        <ul>
+                            <li>Logos & chartes graphiques</li>
+                            <li>Supports marketing</li>
+                            <li>Designs pour réseaux sociaux</li>
+                            <li>Illustrations personnalisées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-inner">              
+                    <!-- Face avant -->
+                    <div class="card-face card-front">
+                        <h3><i class="fa-solid fa-video"></i></h3>
+                        <h2>Vidéographie & Montage</h2>
+                        <p>Production, montage et motion design pour vidéos promotionnelles, tutoriels et contenus courts pensés pour les réseaux sociaux.</p>
+                        <p class="aide"></p>
+                    </div>
+
+                    <!-- Face arrière -->
+                    <div class="card-face card-back">
+                        <h2>Ce que tu obtiens</h2>
+                        <ul>
+                            <li>Vidéos promotionnelles</li>
+                            <li>Montage professionnel</li>
+                            <li>Animations & motion design</li>
+                            <li>Contenu pour réseaux sociaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-inner">              
+                    <!-- Face avant -->
+                    <div class="card-face card-front">
+                        <h3><i class="fa-solid fa-globe"></i></h3>
+                        <h2>Solution Digitale Complete</h2>
+                        <p>Accompagnement stratégique complet : audit, hébergement, maintenance, formation et déploiement pour une présence digitale fiable et durable.</p>
+                        <p class="aide"></p>
+                    </div>
+
+                    <!-- Face arrière -->
+                    <div class="card-face card-back">
+                        <h2>Ce que tu obtiens</h2>
+                        <ul>
+                            <li>Conseils & Stratégies</li>
+                            <li>Hébergement & Maintenance</li>
+                            <li>Support technique 24/7</li>
+                            <li>Formation & Conseils</li>
+                            <li>Contenu pour réseaux sociaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <h1>Prêt à lancer votre projet ?</h1>
+            <p>créons ensemble quelques chose d'exeptionel</p>
+            <a href="contact.html" class="btn-contact">Contactez-nous</a>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <!-- Chatbot flottant Gift Center -->
+    <button class="chat-float" id="chat-float" aria-label="Ouvrir le chat">
+    <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <aside class="chat-widget" id="chat-widget" aria-hidden="true" role="dialog" aria-label="Chat Gift Center">
+    <!-- <header class="chat-header">
+        <div class="brand">
+        <div>
+            <strong>Gift Center</strong>
+            <small>Support & infos</small>
+        </div>
+        </div>
+        <div class="chat-controls">
+        <button id="chat-minimize" title="Minimiser"><i class="fas fa-minus"></i></button>
+        <button id="chat-close" title="Fermer"><i class="fas fa-times"></i></button>
+        </div>
+    </header> -->
+
+    <div class="chat-body" id="chat-body" tabindex="0" aria-live="polite">
+        <div class="bot-message">Bonjour 👋 Je suis l'assistant Gift Center. Comment puis‑je vous aider aujourd'hui ?</div>
+    </div>
+
+    <div class="chat-quick">
+        <button data-action="formations"><i class="fas fa-graduation-cap"></i> Formations</button>
+        <button data-action="creation"><i class="fas fa-laptop-code"></i> Création</button>
+        <button data-action="langues"><i class="fas fa-language"></i> Langues</button>
+    </div>
+
+    <form id="chat-form" class="chat-form" aria-label="Envoyer un message">
+        <input id="chat-input" type="text" placeholder="Écrire un message..." aria-label="Message">
+        <button type="submit" title="Envoyer"><i class="fas fa-paper-plane"></i></button>
+    </form>
+    </aside>
+
+
+
+
+    <a href="#slide" class="float-btn"><i class="fa-solid fa-chevron-up"></i></a>
+
+
+
+
+
+    <!-- footer -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Gift Center">
+                    <img src="../assets/images/FB_IMG_1749970979564.jpg" alt="Gift Center logo" class="footer-logo">
+                </a>
+                <div class="brand-text">
+                    <h2>Gift Center</h2>
+                    <p>Formation professionnelle • Langues & Voayeges • Création digitale — Douala</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="Programmation.html">Formations</a></li>
+                        <li><a href="création.html">Création digitale</a></li>
+                        <li><a href="allemand.html">Langues & Voyage</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>À propos</h3>
+                    <ul>
+                        <li><a href="propos.html">Qui sommes-nous ?</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col contact-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ange Raphael, Douala, Cameroun</p>
+                    <p><i class="fas fa-phone"></i> <a href="https://wa.me/237670123456" target="_blank">+237 6 96 55 39 81</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:giftagency237@gmail.com">giftagency237@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Inscrivez-vous à la newsletter</h3>
+                <p class="small">Recevez nos offres, dates de formation et événements.</p>
+                <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <div class="inputs">
+                        <input type="text" id="news-name" name="name" placeholder="Votre nom" aria-label="Votre nom">
+                        <input type="email" id="news-email" name="email" placeholder="Votre e-mail" aria-label="Votre e-mail" required>
+                    </div>
+                    <a type="submit" class="btn-subscribe"><i class="fas fa-paper-plane"></i> S'inscrire</a>
+                </form>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/giftcenter00237?__tn__=-UC" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/237670123456" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© <span id="year"></span> Gift Center. Tous droits réservés.</p>
+            <nav class="bottom-nav">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+            </nav>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="../script/index.js"></script>
+</body>

@@ -435,6 +435,161 @@ header.hide {
 
 
 
+
+
+
+
+.section22 {
+    padding: 50px 20px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.section22 h2 {
+    font-size: 2rem;
+    color: rgb(38,113,118);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.section22 .div {
+    height: 3px;
+    width: 150px;
+    background-color: rgb(53,144,67);
+    border-radius: 50px;
+    /* margin-bottom: 40px; */
+}
+
+.section22 .text {
+    font-size: 17px;
+    color: #555;
+    line-height: 2.0;
+    text-align: center;
+    padding: 0px 80px;
+}
+
+
+.section22 .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+}
+
+
+.section22 .card {
+    background-color: rgb(248, 246, 246);
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 220px;
+    min-height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.section22 .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.section22 .card h3 {
+    font-size: 1.2rem;
+    color: rgb(38,113,118);
+    margin-bottom: 10px;
+}
+
+.section22 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    background-color: rgb(38,113,118);
+    color: white;
+}
+
+.section22 .card:hover p {
+    transform: scale(1.8);
+}
+
+.section22 .card:hover ul {
+    color: white;
+}
+
+.section22 .card:hover h3 {
+    color: white;
+}
+
+.section22 .card:hover a {
+    background-color: white;
+    color: rgb(38,113,118);
+}
+
+
+
+.section22 .card h3 {
+    font-size: 1.5rem;
+    color: rgb(38,113,118);
+    margin-bottom: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.section22 .card ul {
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 0px;
+    font-size: 14px;
+    color: #555;
+    transition: ease-in-out 0.3s;
+}
+
+/* .section2 .card p {
+    font-size: 20px;
+    color: rgb(53,144,67);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+    transition: ease-in-out 0.3s;
+    font-family: "Bebas Neue", sans-serif;
+} */
+
+.section22 .card a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgb(38,113,118);
+    font-size: 13px;
+    transition: ease-in-out 0.3s;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.section22 .card a:hover {
+    background-color: rgb(28, 80, 83);
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section2 {
     padding: 50px 20px;
     background-color: rgb(245, 245, 245);
@@ -1363,6 +1518,16 @@ header.hide {
     padding: 20px;
     text-align: justify;
   }
+
+  .section22 .text{
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .section22 .cards {
+    flex-wrap: wrap;
+  }
+
 
   .section3 {
     flex-wrap: wrap;
