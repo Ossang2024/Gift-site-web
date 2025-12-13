@@ -293,24 +293,19 @@ header.hide {
 }
 
 .slider-wrapper .slide-content h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 900;
     margin: 10px 0px;
     text-transform: capitalize;
-}
-
-.slider-wrapper .slide-content h2 {
-    font-size: 40px;
-    font-weight: 900;
-    margin: 10px 0px;
-    text-transform: capitalize;
+    max-width: 650px;
 }
 
 .slider-wrapper .slide-content p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 10px 0px;
     margin-bottom: 20px;
+    max-width: 800px;
 }
 
 .slider-wrapper .slide-content a {
