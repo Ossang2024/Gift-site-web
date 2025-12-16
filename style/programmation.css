@@ -391,7 +391,7 @@ header.hide {
 }
 
 .first .left {
-  max-width: 500px;
+  /* max-width: 500px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,9 +400,11 @@ header.hide {
 }
 
 .first .left h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: rgb(38,113,118);
   text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .first .left div {
@@ -421,7 +423,7 @@ header.hide {
 }
 
 .first .right img {
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 10px;
 }
 
@@ -456,9 +458,10 @@ header.hide {
 }
 
 .section1 .left h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: rgb(38,113,118);
   text-align: center;
+  font-weight: 600;
 }
 
 .section1 .left div {
@@ -607,6 +610,8 @@ header.hide {
     color: rgb(38,113,118);
     text-align: center;
     text-transform: capitalize;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .section2 .div {
@@ -736,6 +741,7 @@ header.hide {
   font-size: 2rem;
   color: rgb(38,113,118);
   text-align: center;
+  font-weight: 600;
 }
 
 .section3 .left .div {
@@ -888,6 +894,7 @@ header.hide {
     font-size: 2rem;
     color: rgb(38,113,118);
     text-align: center;
+    font-weight: 600;
 }
 
 .section4 .div {
@@ -957,6 +964,7 @@ header.hide {
     font-size: 2rem;
     text-transform: capitalize;
     color: rgb(28, 80, 83);
+    font-weight: 600;
 }
 
 .section5 .div {

@@ -297,6 +297,7 @@ header.hide {
     font-weight: 900;
     margin: 10px 0px;
     text-transform: capitalize;
+    padding-right: 25px;
 }
 
 .slider-wrapper .slide-content h2 {
@@ -311,6 +312,7 @@ header.hide {
     font-weight: 600;
     margin: 10px 0px;
     margin-bottom: 20px;
+    padding-right: 25px;
 }
 
 .slider-wrapper .slide-content a {
