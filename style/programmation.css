@@ -415,7 +415,7 @@ header.hide {
 }
 
 .first .left p {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
   color: #555;
   line-height: 1.6;
@@ -729,7 +729,7 @@ header.hide {
 }
 
 .section3 .left {
-  max-width: 500px;
+  max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -906,7 +906,7 @@ header.hide {
 
 .section4 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 

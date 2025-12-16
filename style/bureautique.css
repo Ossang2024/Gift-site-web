@@ -295,17 +295,11 @@ header.hide {
 }
 
 .slider-wrapper .slide-content h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 900;
     margin: 10px 0px;
     text-transform: capitalize;
-}
-
-.slider-wrapper .slide-content h2 {
-    font-size: 40px;
-    font-weight: 900;
-    margin: 10px 0px;
-    text-transform: capitalize;
+    padding-right: 25px;
 }
 
 .slider-wrapper .slide-content p {
@@ -313,6 +307,7 @@ header.hide {
     font-weight: 600;
     margin: 10px 0px;
     margin-bottom: 20px;
+    padding-right: 25px;
 }
 
 .slider-wrapper .slide-content a {
@@ -404,7 +399,7 @@ header.hide {
 }
 
 .first .left h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: rgb(38,113,118);
   text-align: center;
 }
@@ -594,14 +589,14 @@ header.hide {
     min-height: 100vh;
     background-color: rgb(245, 245, 245);
     display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
     padding: 50px 20px;
 }
 
 .section3 .left {
-  max-width: 500px;
+  max-width: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -760,7 +755,7 @@ header.hide {
 
 .section4 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
