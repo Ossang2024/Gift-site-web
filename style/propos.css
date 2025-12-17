@@ -307,6 +307,7 @@ header.hide {
 }
 
 .section2 .left {
+  max-width: 850px;
   display: flex;
   flex-direction: column;
   gap: 10px;
