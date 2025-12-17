@@ -448,7 +448,6 @@ header.hide {
     font-size: 2rem;
     color: rgb(38,113,118);
     text-align: center;
-    text-transform: capitalize;
 }
 
 .section2 .div {
@@ -593,10 +592,12 @@ header.hide {
     justify-content: center;
     gap: 30px;
     padding: 50px 20px;
+    flex-direction: column;
 }
 
 .section3 .left {
-  max-width: 800px;
+  /* max-width: 800px; */
+  padding: 20px 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,10 +632,10 @@ header.hide {
   font-weight: bold;
 }
 
-.section3 .left a {
+/* .section3 .left a {
     text-decoration: none;
     color: blue;
-}
+} */
 
 .section3 .left ul {
   /* list-style: none; */
@@ -710,6 +711,83 @@ header.hide {
   border-radius: 10px;
   position: relative;
   z-index: 1; /* keep image below overlay */
+}
+
+/* Training cards grid (bureautique) */
+.training-section { 
+  background: #fff; 
+  padding: 18px; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04); 
+  border: 1px solid rgba(38,113,118,0.06); 
+  margin-bottom: 18px; }
+
+.training-section h3 { 
+  color: rgb(38,113,118); 
+  margin-bottom: 6px; }
+
+.training-section .meta { 
+  color:#666; 
+  margin-bottom: 10px; }
+
+.training-section h4 { 
+  margin-top: 10px; 
+  color: #2b2b2b; }
+
+.training-section ol { 
+  margin-left: 18px; 
+  color:#444; }
+
+.training-section p { 
+  color:#444; 
+  line-height:1.6; 
+  text-align: center;
+}
+
+.training-action { 
+  margin-top: 12px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+
+
+.training-action .aa { 
+  padding: 8px 12px; 
+  background: rgb(38,113,118); 
+  color: white; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight:700; }
+
+.training-action .aa:hover { 
+  background: rgb(28, 80, 83);  
+  transition: ease-in-out 0.3s; 
+}
+
+@media (max-width: 900px) {
+  .section3 { padding: 30px 18px; }
+}
+
+@media (max-width: 700px) {
+  .section3 { 
+    padding: 22px 12px; 
+  }
+
+  .section3 .right { 
+    order: 2; 
+    margin-top: 18px; 
+  }
+
+  .training-section { 
+    padding: 14px; 
+  }
+
+  .section3 .left {
+  /* max-width: 800px; */
+  padding: 20px 5px;}
+
 }
 
 
