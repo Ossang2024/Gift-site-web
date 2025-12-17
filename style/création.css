@@ -230,7 +230,8 @@ header.hide {
 /* début de la premiere section */
 .section1 {
     /* margin-top: 30px; */
-    min-height: 100vh;
+    min-height: 90vh;
+    max-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -245,6 +246,7 @@ header.hide {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 800px;
 }
 
 .section1 .left h1 {
@@ -372,6 +374,7 @@ header.hide {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  max-width: 800px;
 }
 
 .section2 .content-left h1{

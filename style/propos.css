@@ -395,6 +395,7 @@ header.hide {
   justify-content: center;
   gap: 20px;
   padding: 20px 50px;
+    max-width: 850px;
 }
 
 .section3 .containt p {
