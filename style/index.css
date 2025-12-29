@@ -41,10 +41,9 @@ header.hide {
     list-style: none;
     justify-content: center;
     align-items: center;
-    text-transform: capitalize;
     font-size: 12px;
     gap: 30px;
-    margin: 5px 20px;
+    /* margin: 5px 20px; */
 }
 
 .header-top a {
@@ -70,7 +69,7 @@ header.hide {
 }
 
 .header-bottom .logo img {
-    max-height: 40px;
+    max-height: 30px;
 }
 
 .header-bottom ul {
@@ -377,19 +376,19 @@ header.hide {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .section2 .first {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
   padding: 50px 20px;
 }
 
 .section2 .first .left {
-  max-width: 500px;
+  max-width: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -415,7 +414,7 @@ header.hide {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
-  text-align: center;
+  text-align: justify;
 }
 
 .section2 .first a {
@@ -523,7 +522,7 @@ header.hide {
   display: flex;
   align-items: center;
   flex-direction: column;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(38,113,118);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -535,7 +534,8 @@ header.hide {
 
 .section3 .cards .card i {
     font-size: 3rem;
-    color: rgb(38,113,118);
+    /* color: rgb(38,113,118); */
+    color: rgb(245, 245, 245);
 }
 
 .section3 .cards .card:hover {
@@ -545,14 +545,15 @@ header.hide {
 
 .section3 .cards .card h3 {
     font-size: 1.5rem;
-    color: rgb(38,113,118);
     margin-bottom: 10px;
+    color: rgb(245, 245, 245);
 }
 
 .section3 .cards .card p {
     font-size: 1rem;
-    color: #555;
+    /* color: #555; */
     line-height: 1.6;
+    color: rgb(245, 245, 245);
 }
 
 
@@ -594,13 +595,14 @@ header.hide {
 
 .section4 .left .div {
     height: 3px;
-    width: 70px;
+    width: 100px;
     background-color: rgb(53,144,67);
     border-radius: 50px;
+    margin-bottom: 30px;
 }
 
 .section4 .left p {
-  margin-top: 20px;
+  /* margin-top: 10px; */
   font-size: 15px;
   color: #555;
   line-height: 1.6;
@@ -619,7 +621,7 @@ header.hide {
 
 .section4 .left ul {
   list-style: none;
-  margin-top: 20px;
+  /* margin-top: 10px; */
   font-size: 15px;
   color: #555;
   line-height: 1.6;
@@ -715,7 +717,7 @@ header.hide {
 
 /* début de la section 5 */
 .section5 {
-    min-height: 100vh;
+    /* max-height: 100vh; */
     padding: 50px 50px ;
 }
 

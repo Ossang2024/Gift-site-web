@@ -38,7 +38,6 @@ header {
     list-style: none;
     justify-content: center;
     align-items: center;
-    text-transform: capitalize;
     font-size: 12px;
     gap: 30px;
 }
@@ -66,7 +65,7 @@ header {
 }
 
 .header-bottom .logo img {
-    max-height: 40px;
+    max-height: 30px;
 }
 
 .header-bottom ul {
