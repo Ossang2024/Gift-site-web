@@ -22,7 +22,7 @@ header {
 }
 
 header.hide {
-    transform: translateY(-100%);
+    transform: translateY(-40%);
 }
 
 .header-top {
@@ -1253,11 +1253,11 @@ header.hide {
   left: -100%;
   width: 70%;
   height: 100%;
-  background: rgb(28, 80, 83);
+  background: rgba(28, 80, 83, 0.954);
   color: #fff;
   padding: 40px 20px;
   transition: 0.4s ease;
-  z-index: 900;
+  z-index: 100000;
   overflow-y: auto;
   transition: ease-in-out 0.3s;
   display: none;
@@ -1347,6 +1347,10 @@ header.hide {
   .header-top ul {
     padding: 3px;
   }
+
+  header.hide {
+    transform: translateY(-53%);
+}
 
   .header-top ul li{
     text-wrap: nowrap;
