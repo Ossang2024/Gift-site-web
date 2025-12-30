@@ -22,7 +22,7 @@ header {
 }
 
 header.hide {
-    transform: translateY(-100%);
+    transform: translateY(-40%);
 }
 
 .header-top {
@@ -56,7 +56,7 @@ header.hide {
 
 
 .header-bottom {
-    padding: 0px 70px;
+    padding: 5px 70px;
     color: white;
     background-color: white;
     display: flex;
@@ -1455,6 +1455,10 @@ header.hide {
       .header-bottom .nav {
     display: none;
   }
+
+    header.hide {
+    transform: translateY(-53%);
+}
 
   .header-bottom {
     padding: 4px 20px;

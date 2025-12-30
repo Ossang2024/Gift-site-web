@@ -21,6 +21,10 @@ header {
     transition: ease-in-out 0.5s;
 }
 
+  header.hide {
+    transform: translateY(-40%);
+}
+
 
 .header-top {
     padding: 5px 70px;
@@ -53,7 +57,7 @@ header {
 
 
 .header-bottom {
-    padding: 0px 70px;
+    padding: 5px 70px;
     color: white;
     background-color: white;
     display: flex;
@@ -879,7 +883,7 @@ header {
 @media (max-width: 900px){
 
   header.hide {
-    transform: translateY(-100%);
+    transform: translateY(-40%);
 }
 
 
