@@ -306,7 +306,7 @@ header.hide {
 }
 
 .section2 .left {
-  max-width: 850px;
+  max-width: 950px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -354,7 +354,7 @@ header.hide {
     padding: 80px 0px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
 }
 
 .section2 .right img {
@@ -363,6 +363,133 @@ header.hide {
   box-shadow: 0 6px 18px rgba(4, 135, 158, 0.4);
 
 }
+
+
+
+
+
+
+
+
+/* début de la troisieme section */
+.section22 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+    padding: 30px 50px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section22 h1 {
+  font-size: 2.2rem;
+  color: rgb(38,113,118);
+  font-weight: 600;
+  text-align: center;
+}
+
+.section22 p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 950px;
+}
+
+.section22 .div {
+    height: 2px;
+    width: 110px;
+    background-color: rgb(53,144,67);
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+.team-section {
+  text-align: center;
+  padding: 10px 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.team-card {
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.39);
+  /* Animation show/hide : transition sur opacité, translation et hauteur */
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease, margin 0.35s ease, padding 0.35s ease;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 400px; /* valeur suffisante pour le contenu */
+  overflow: hidden;
+}
+
+.team-card p {
+  color: white;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Couleurs de fond */
+.yellow { background-color: rgb(239,180,8); }
+.blue { background-color: rgb(29,85,116); }
+.pink { background-color: rgb(39, 114, 119); }
+.green { background-color: #66bb6a; }
+.orange { background-color: rgb(1,164,142); }
+
+.hidden {
+  /* Ne plus utiliser display:none pour permettre la transition.
+     On réduit la hauteur, l'opacité et on décale l'élément vers le bas. */
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease, margin 0.35s ease, padding 0.35s ease;
+}
+
+#voirPlusBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(38,113,118);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: ease-in-out 0.3s;
+}
+
+#voirPlusBtn:hover {
+  background-color: rgb(28, 80, 83);
+}
+
+
+
+
+
 
 
 
@@ -643,6 +770,7 @@ header.hide {
   gap: 18px;
   align-items: center;
   min-width: 220px;
+  flex-wrap: wrap;
 }
 .footer-logo{
   height: 64px;
@@ -696,7 +824,7 @@ header.hide {
 .footer-newsletter h3{ color: var(--primary); margin-bottom: 8px; }
 .footer-newsletter .small{ color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
 
-.newsletter-form .inputs{ display:flex; gap:8px; margin-bottom:12px; }
+.newsletter-form .inputs{ display:flex; flex-wrap: wrap; gap:8px; margin-bottom:12px; }
 .newsletter-form input{
   flex:1;
   padding: 10px 12px;
@@ -899,7 +1027,7 @@ header.hide {
 
 
 /* Responsiveness */
-@media (max-width: 700px){
+@media (max-width: 900px){
 
      .header-bottom .nav {
     display: none;
@@ -970,6 +1098,16 @@ header.hide {
     max-width: 350px;
   }
 
+  .section22 {
+    padding: 20px;
+    gap: 20px;
+  }
+
+
+  .team-section {
+  text-align: center;
+  padding: 10px 10px;
+
 
   .section3 {
     padding: 30px 0px;
@@ -980,7 +1118,7 @@ header.hide {
   }
 
   
-  .chat-float {
+    .chat-float {
     bottom: 90px;
     right: 50px;
   }
@@ -988,6 +1126,8 @@ header.hide {
   .float-btn{
     bottom: 30px;
   }
+
+
 
 
 
@@ -1004,4 +1144,5 @@ header.hide {
   .footer-newsletter{ order: 2; width:100%; }
   .footer-brand{ order: 1; }
   .footer-bottom{ flex-direction: column; align-items:flex-start; gap:12px; }
+}
 }

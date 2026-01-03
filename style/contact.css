@@ -625,6 +625,7 @@ header {
   gap: 18px;
   align-items: center;
   min-width: 220px;
+  flex-wrap: wrap;
 }
 .footer-logo{
   height: 64px;

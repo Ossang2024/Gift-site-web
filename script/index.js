@@ -50,9 +50,12 @@ setInterval(nextSlide, slideInterval);
 
 
 
+
+
+
 // animation des chifres dans la section statistiques
   const counters = document.querySelectorAll('.count');
-  const speed = 100; // plus le chiffre est bas, plus c’est rapide
+  const speed = 250; // plus le chiffre est bas, plus c’est rapide
 
   const animateCounters = () => {
     counters.forEach(counter => {
@@ -62,7 +65,7 @@ setInterval(nextSlide, slideInterval);
 
       if (count < target) {
         counter.innerText = Math.ceil(count + increment);
-        setTimeout(animateCounters, 50);
+        setTimeout(animateCounters, 250);
       } else {
         counter.innerText = target;
       }
@@ -97,7 +100,33 @@ document.querySelectorAll('.col14 .cart h2').forEach(h2 => {
 
 
 
+// Bouton "Voir plus" dans la section équipe dans la page À propos
+const voirPlusBtn = document.getElementById('voirPlusBtn');
+if (voirPlusBtn) {
+  voirPlusBtn.addEventListener('click', () => {
+    const hiddenCards = document.querySelectorAll('.team-card.hidden');
+    if (hiddenCards.length > 0) {
+      // Affiche les cartes cachées
+      hiddenCards.forEach(card => card.classList.remove('hidden'));
+      voirPlusBtn.textContent = 'Voir moins';
+    } else {
+      // Masque les cartes additionnelles (garder les 4 premières visibles)
+      const allCards = document.querySelectorAll('.team-card');
+      allCards.forEach((card, index) => {
+        if (index >= 4) card.classList.add('hidden');
+      });
+      voirPlusBtn.textContent = 'Voir plus';
+    }
+  });
+}
 
+
+
+
+
+
+
+// Témoignages — changement au clic sur les points
 function changeOption(option) {
     image = document.querySelector (".img")
     text = document.querySelector(".testimony-text")

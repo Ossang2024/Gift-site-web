@@ -1169,9 +1169,10 @@ header.hide {
   gap: 18px;
   align-items: center;
   min-width: 220px;
+  flex-wrap: wrap;
 }
 .footer-logo{
-  height: 64px;
+  max-height: 64px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(4,134,158,0.12);

@@ -1088,9 +1088,10 @@ header.hide {
   gap: 18px;
   align-items: center;
   min-width: 220px;
+  flex-wrap: wrap;
 }
 .footer-logo{
-  height: 64px;
+  max-height: 60px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(4,134,158,0.12);
@@ -1335,6 +1336,10 @@ header.hide {
 
 /* Responsiveness */
 @media (max-width: 700px){
+
+  .mobile-menu {
+    z-index: 100000;
+  }
 
   .header-top {
     flex-wrap: wrap;
